@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, 
+	initial-scale=1.0">
+	<title>Pets</title>
+	<meta name="description" content="page about pets">
+	<meta name="keywords" content="pet, pets, cat, dog, parrot">
+	<meta name="author" content="Mykola Matsiuk">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<p style="text-align: center; font-weight: bold">To order product, please fill up the form:</p>
+	<form action="index.php" method="post" class="form">
+		<div class="form_row" class="text">
+			<label for="form_fname">First name:</label>
+			<input type="text" name="fname" id="form_fname" required>
+		</div>
+		<div class="form_row" class="text">
+			<label for="form_lname">Last name:</label>
+			<input type="text" name="lname" id="form_lname" required>
+		</div>
+		<div class="form_row" class="text">
+			<label for="form_phone">Phone:</label>
+			<input type="tel" name="phone" id="form_phone">
+		</div>
+		<div class="form_row" class="text">
+			<label for="form_mail">Email:</label>
+			<input type="email" name="email" id="form_mail" required>
+		</div>
+		<div class="form_row">
+			<strong>What kind of product would you like to order?</strong><br>
+			<input type="checkbox" name="prod1" id="p1"><label for="p1">meal</label><br>
+			<input type="checkbox" name="prod2" id="p2"><label for="p2">care</label><br>
+			<input type="checkbox" name="prod2" id="p3"><label for="p3">entertaiment</label><br>
+		</div>
+		<div class="form_row">
+			<b>How would you like to get your purchase?</b><br>
+			<input type="radio" name="quest" id="form_quest" checked><label for="form_quest">Delivery</label><br>
+			<input type="radio" name="quest" id="form_quest1"><label for="form_quest1">Buying at shop</label>
+		</div>
+		<div class="form_row">
+			<label for="form_ask"><b>Tell us about your pet:</b></label>
+			<textarea name="ask" id="form_ask" placeholder="you can tell an interesting story about your pet and in the future see it on our web-page."></textarea>
+		</div>
+		<div class="form_row">
+			<input type="submit" value="Send form">
+		</div>
+	</form>
+	<p style="text-align: center; font-weight: bold; margin-top: 70px;">
+		Our adress: Petland, Cats's str.33<br>
+		Telephone: +5802321334.  
+	</p>
+</body>
+</html>

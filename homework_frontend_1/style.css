@@ -1,0 +1,73 @@
+body {
+    font-size: large;
+    width: 850px;
+    margin: 10px 0px 0px 20px;
+    margin: auto;
+}
+h1 {
+    font-size: 220%;
+    margin-top: 40px;
+}
+h2 {
+    color: #200280; 
+    letter-spacing: 3px;
+    margin-top: 80px;
+}
+h1, h2 {
+    width: 600px;
+    margin-bottom: 30px;
+}
+#doggy {
+    float: right;
+    margin-right: 20px;
+}
+#main {
+    background: #D1F4FC;
+    border: 1px dashed white;
+    padding: 5px;
+    border-radius: 5px;
+}
+.pics {
+    margin: 20px 0px;
+}
+.form {
+    width: 300px;
+    margin: auto;
+}
+.form_row {
+    margin-bottom: 10px;
+}
+.form_row input {
+    float: right;
+}
+.form_row input[type=submit] {
+    width: 173px;
+}
+.form_row textarea {
+    width: 293px;
+    height: 50px;
+}
+img {
+    margin-left: 10px;
+}
+span {
+    font-weight: bold;
+    font-style: italic;
+}
+.products {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+.products p {
+    background: #D1F4FC;
+}
+.products a {
+    text-decoration: none;
+    color: black;
+}
+table {
+    margin-left: 40px;
+}
