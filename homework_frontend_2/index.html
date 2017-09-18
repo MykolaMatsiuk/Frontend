@@ -5,8 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Search page</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="sidebar">
+    <p class="sidepics">
+      <img src="images/london_sidebar.jpg" alt="london_pic">
+      <img src="images/map_sidebar.png">
+      <h1>Лондон</h1>
+      <p>Столица Великобритании</p>
+    </p>
+    <p>Ло́ндон — столица и крупнейший город Соединённого Королевства Великобритании и Северной Ирландии. Административно образует регион Англии Большой Лондон, разделённый на 33 самоуправляемых территории. <a href="#">Википедия</a></p>
+    <p><b><a href="#">Площадь</a>:</b> 1 572 км²</p>
+    <p><b><a href="#">Население</a>:</b> 8,788 миллиона (2016 г.)</p>
+    <p><b><a href="#">Дата Вторжения</a>:</b> 15 сентября 1940 г.</p>
+    <p><b><a href="#">Местное время</a>:</b> воскресенье 13:45</p>
+    <p><b><a href="#">Погода</a>:</b> 15°C, ветер С, 10 км/ч, влажность 70 %</p>
+    <div class="colleges">
+      <h2><a href="#">Колледжи и университеты</a></h2>
+      <p><a href="#">Еще 25+</a></p>
+      <a href="#"><img src="images/colleges/col1.png" alt="college" title="Имперсий колледж Лондона">Имперсий колледж Лондона</a>
+      <a href="#"><img src="images/colleges/col2.png" alt="college" title="Лондонский университет">Лондонский университет</a>
+      <a href="#"><img src="images/colleges/col3.png" alt="college" title="Университет Восточного Лондона">Университет Восточного Лондона</a>
+      <a href="#"><img src="images/colleges/col4.jpg" alt="college" title="Вестминстерский университет">Вестминстерский университет</a>
+    </div>
+    <div class="sim_req">
+      <h2><a href="#">Похожие запросы</a></h2>
+      <p><a href="#">Еще 10+</a></p>
+      <a href="#"><img src="images/sim_req/req1.jpg" alt="foto" title="Великобритания">Великобритания</a>
+      <a href="#"><img src="images/sim_req/req2.png" alt="foto" title="Англия">Англия</a>
+      <a href="#"><img src="images/sim_req/req3.jpg" alt="foto" title="Париж">Париж</a>
+      <a href="#"><img src="images/sim_req/req4.jpg" alt="foto" title="Букингемский дворец">Букингемский дворец</a>
+    </div>
+    <div class="more_info">
+      <p><a href="#">Лондон: подробнее</a></p>
+    </div>
+  </div>
   <div id="main">
     <div class="section">
       <h1><a href="#">Лондон - Википедия</a></h1>
@@ -29,30 +63,30 @@
     <div class="section">
       <h1>Главные новости</h1>
       <div class="block">
-        <img src="images/first_general.jpg" alt="foto">
-        <h1><a href="#">Лондон: Уровень террористической угрозы повышен до 
-        критического</a></h1>
+        <a href="#"><img src="images/first_general.jpg" alt="foto">
+        <h1>Лондон: Уровень террористической угрозы повышен до 
+        критического</h1></a>
         <p><span class="source">EADaily</span> · 1 день назад</p>
       </div>
       <div class="block">
-        <img src="images/second_general.jpg" alt="foto">
-        <h1><a href="#">Вчера Барселона, сегодня Лондон... Алексей Мартынов</a></h1>
+        <a href="#"><img src="images/second_general.jpg" alt="foto">
+        <h1>Вчера Барселона, сегодня Лондон... Алексей Мартынов</h1></a>
         <p><span class="source">News Front</span> · 1 день назад</p>
       </div>
       <div class="block">
-        <img src="images/third_general.jpg" alt="foto" width="205" height="115">
-        <h1><a href="#">Лондон: задержан второй подозреваемый</a></h1>
+        <a href="#"><img src="images/third_general.jpg" alt="foto" width="205" height="115">
+        <h1>Лондон: задержан второй подозреваемый</h1></a>
         <p><span class="source">Euronews</span> · 8 часов назад</p>
       </div>
       <p><a href="#">Больше результатов по запросу "London"</a></p>
     </div>
-    <div class="section">
+    <div class="section" class="pics">
       <h1>Картинки по запросу London</h1>
-      <img src="images/image1.jpg" alt="london">
-      <img src="images/image2.jpg" alt="london">
-      <img src="images/image3.jpg" alt="london">
-      <img src="images/image4.jpg" alt="london">
-      <img src="images/image5.jpg" alt="london">
+      <img id="first" src="images/image1.jpg" alt="london">
+      <img id="second" src="images/image2.jpg" alt="london">
+      <img id="third" src="images/image3.jpg" alt="london">
+      <img id="fourth" src="images/image4.jpg" alt="london">
+      <img id="fifth" src="images/image5.jpg" alt="london">
       <p><a href="#">Другие картинки по запросу "London"</a></p>
       <p class="links">Пожаловаться на картинки</p>
     </div>
@@ -62,39 +96,6 @@
       <p class="paragraph">Plan &amp; book your trip to <b>London</b> with the official 
       <b>London</b> travel guide. Find the best things to do, what's on, events, 
       activities, sightseeings &amp; attractions.</p>
-    </div>
-  </div>
-  <div id="sidebar">
-    <p class="sidepics">
-      <img src="images/london_sidebar.jpg" alt="london_pic">
-      <img src="images/map_sidebar.png">
-      <h1>Лондон</h1>
-      <p>Столица Великобритании</p>
-    </p>
-    <p>Ло́ндон — столица и крупнейший город Соединённого Королевства Великобритании и Северной Ирландии. Административно образует регион Англии Большой Лондон, разделённый на 33 самоуправляемых территории. <a href="#">Википедия</a></p>
-    <p><b><a href="#">Площадь</a>:</b> 1 572 км²</p>
-    <p><b><a href="#">Население</a>:</b> 8,788 миллиона (2016 г.)</p>
-    <p><b><a href="#">Дата Вторжения</a>:</b> 15 сентября 1940 г.</p>
-    <p><b><a href="#">Местное время</a>:</b> воскресенье 13:45</p>
-    <p><b><a href="#">Погода</a>:</b> 15°C, ветер С, 10 км/ч, влажность 70 %</p>
-    <div class="colleges">
-      <h2><a href="#">Колледжи и университеты</a></h2>
-      <p><a href="#">Еще 25+</a></p>
-      <a href="#"><img src="images/colleges/col1.png" alt="college" title="Имперсий колледж Лондона">Имперсий колледж Лондона</a>
-      <a href="#"><img src="images/colleges/col2.png" alt="college" title="Лондонский университет">Лондонский университет</a>
-      <a href="#"><img src="images/colleges/col3.png" alt="college" title="Университет Восточного Лондона">Университет Восточного Лондона</a>
-      <a href="#"><img src="images/colleges/col4.png" alt="college" title="Вестминстерский университет">Вестминстерский университет</a>
-    </div>
-    <div class="sim_req">
-      <h2><a href="#">Похожие запросы</a></h2>
-      <p><a href="#">Еще 10+</a></p>
-      <a href="#"><img src="images/sim_req/req1.jpg" alt="foto" title="Великобритания">Великобритания</a>
-      <a href="#"><img src="images/sim_req/req2.png" alt="foto" title="Англия">Англия</a>
-      <a href="#"><img src="images/sim_req/req3.jpg" alt="foto" title="Париж">Париж</a>
-      <a href="#"><img src="images/sim_req/req4.jpg" alt="foto" title="Букингемский дворец">Букингемский дворец</a>
-    </div>
-    <div class="more_info">
-      <p><a href="#">Лондон: подробнее</a></p>
     </div>
   </div>
 </body>

@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: arial, sans-serif;
+  font-size: small;
+}
+h1 a, h1 {
+  font-size: large;
+}
+a {
+  text-decoration: none;
+}
+a:link {
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: underline;
+}
+#sidebar {
+  width: 35%;
+  float: right;
+  margin: 5px 10px;
+  border: solid thin #E6E4E9;
+}
+#sidebar a {
+  color: black;
+}
+#main {
+  margin: 5px 10px;
+}
+.section {
+  margin: 30px 10px;
+  padding: 10px;
+}
+.source {
+  color: #006621;
+}
+.block {
+  display: inline-table;
+  width: 205px;
+  border: thin solid #E6E4E9;
+}
+img#second {
+  position: absolute;
+  left: 136px;
+  overflow: hidden;
+  margin: 10px;
+}
+.sim_req a, .colleges a {
+  display: inline-block;
+  width: 80px;
+}
