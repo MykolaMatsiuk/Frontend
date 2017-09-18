@@ -118,3 +118,6 @@ a.big {
 .sidepics h1 {
   font-size: xx-large;
 }
+#hidden {
+  display: none;
+}
