@@ -2,23 +2,25 @@
 }
 body {
     width: 1150px;
-    font-size: ;
+    font-style: ;
     margin: 0 auto;
     background: #EFF3F4;
+    font-family: 'Drois Sans', sans-serif;
 }
-header h1 {
-    font-size: 50px;
-    font-family: helvetica, "Arail Narrow"; 
-    color: #0742D8;
+header {
+    position: relative;
+}
+#logo {
     text-align: center;
+    margin: 40px 0px 30px;
+    padding-bottom: 10px;
 }
-.header {
-    color: #45B4FA;
-}
-input[type="submit"] {
-    font-family: "Chaucer", "Lucida Sans";
+header input[type="submit"] {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    font-family: 'Courgette', cursive;
     text-decoration: none;
-    float: right;
     color: #0E6EE5;
     border-radius: 50px;
     padding: 3px 25px;
@@ -27,6 +29,7 @@ input[type="submit"] {
     background: #CCCFD1;
 }
 nav {
+    padding: 15px;
     text-align: center;
     background: #CCCFD1;
     border-radius: 5px;
@@ -34,7 +37,7 @@ nav {
 nav a {
     text-decoration: none;
     color: black;
-   /* padding: 30px 30px;*/
+    padding: 30px 35px;
     margin: 10px 30px;
 }
 .dropdown {
@@ -49,4 +52,57 @@ nav a {
 }
 .dropdown:hover .dropdown-content {
     display: block;
+}
+.backgr {
+    margin: 10px;
+    position: relative;
+    background-image: url("images/background.jpg");
+}
+.center {
+    text-align: center;
+    width: 450px;
+    color: white;
+    margin: 0 auto;
+}
+.center h1 {
+    padding-top: 50px;
+    font-size: 350%;
+    font-stretch: ultra-condensed;
+}
+main {
+    background: white;
+    border-radius: 5px;
+}
+form {
+    position: absolute;
+    right: 35px;
+    top: 72px;
+    width: 280px;
+    height: 355px;
+    background: #EFF3F4;
+    border-radius: 5px;
+    text-align: center;
+}
+form input {
+    width: 240px;
+    padding: 5px;
+    margin: 5px;
+    border-style: inset;
+}
+form input[type="submit"] {
+    color: white;
+    padding: 3px;
+    height: 25px;
+    width: 90px;
+    background: #0E6EE5;
+    border-radius: 15px;
+    border: none;
+}
+form textarea {
+    margin-top: 5px;
+    height: 130px;
+    width: 248px;
+}
+form p {
+    color: #0E6EE5;
 }
