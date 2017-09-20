@@ -19,20 +19,21 @@
             <input type="submit" name="button_support" value="SUPPORT">
         </header>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Solutions</a>
-            <div class="dropdown">
-                <a href="#">Resources</a>
-                <div class="dropdown-content">
-                    <a href="#">Case Studies</a>    
-                    <a href="#">White Papers</a>
-                    <a href="#">Webinars</a>
-                    <a href="#">Video Demonstration</a>
-                    <a href="#">Customer References</a>
-                    <a href="#">Free Trial</a>
-                </div>
-            </div>
-            <a href="#">About Us</a>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Solutions</a></li>
+                <li><a href="#">Resources</a>
+                    <ul>
+                        <li><a href="#">Case Studies</a></li>   
+                        <li><a href="#">White Papers</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">Video Demonstration</a></li>
+                        <li><a href="#">Customer References</a></li>
+                        <li><a href="#">Free Trial</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About Us</a></li>
+            </ul>
         </nav>
         <main>
             <div class="backgr">
@@ -60,15 +61,17 @@
                 </form>
             </div>
             <div class="video">
-                <h1>Tittle of video</h1>
-                <video width="320" height="240" controls>
-                    <source src="" type="">
-                Your browser does not support video tag.
-                </video>
+                <h1 class="title">Title of video</h1>
+                <div class="vidos">
+                    <video height="357" controls poster="images/prevideo.png">
+                        <source src="" type="">
+                    Your browser does not support video tag.
+                    </video>
+                </div>
             </div>
-            <div id="budget">
-                <h1>If you take cards, where is your budget going to go?</h1>
-                <div id="items">
+            <div class="budget">
+                <h1 class="title">If you take cards, where is your budget going to go?</h1>
+                <div class="items">
                     <div class="item">
                         <h2>PCI Compliance</h2>
                         <img src="images/image1.jpg" alt="image1">
