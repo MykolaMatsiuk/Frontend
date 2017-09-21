@@ -96,7 +96,9 @@ nav ul {
     font-stretch: ultra-condensed;
 }
 .center a {
-    margin-top: 50px;
+    position: absolute;
+    bottom: 47px;
+    left: 484px;
     font-size: 150%;
     text-decoration: none;
     text-shadow: 0px 1px 1px #1A1584;
@@ -104,7 +106,7 @@ nav ul {
     border-top: thin solid white;
     border-radius: 25px;
     background: linear-gradient(to top, #343DF1, #5FCFF9);
-    padding: 7px 22px;
+    padding: 7px 23px;
 }
 main {
     background: white;
@@ -194,4 +196,29 @@ h1.title {
     border-style: none;
     padding: 5px 10px;
 }
-
+footer {
+    display: table;
+    background: #5054E9;
+}
+.footer_item {
+    display: table-cell;
+    width: 180px;
+    height: 50px;
+    padding: 20px;
+}
+.footer_item ul {
+    list-style: none;
+    text-align: center;
+    padding: 0px;
+}
+.footer_item li a {
+    font-size: 80%;
+    text-decoration: none;
+    color: white;
+}
+.footer_item h3 {
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+    text-transform: uppercase;
+}
