@@ -1,9 +1,16 @@
-body {
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
     width: 1150px;
-    font-style: ;
     margin: 0 auto;
     background: #EFF3F4;
     font-family: 'Drois Sans', sans-serif;
+}
+body {
+    background: #EFF3F4;
 }
 header {
     position: relative;
@@ -13,19 +20,22 @@ header {
     margin: 40px 0px 30px;
     padding-bottom: 10px;
 }
-header input[type="submit"] {
+.support {
+    width: 80px;
     position: absolute;
     right: 0px;
     bottom: 0px;
+    border-radius: 20px;
+    background: linear-gradient(to top, #CCCFD1, #E6E1E1);
+    padding: 3px 25px;
+}
+.support a {
     font-family: 'Courgette', cursive;
     text-decoration: none;
     color: #0E6EE5;
-    border-radius: 20px;
-    border-style: none;
-    padding: 3px 25px;
     font-size: 17px;
-    margin: 0px;
-    background: linear-gradient(to top, #CCCFD1, #E6E1E1);
+    text-transform: uppercase;
+    padding-left: 7px;
 }
 .navigation {
     height: 50px;
@@ -52,6 +62,11 @@ nav ul {
     margin: 0px 47px;
     padding: 16px 20px;
 }
+.navigation li li a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 43px;
+}
 .navigation ul li {
     float: none;
 }
@@ -62,9 +77,11 @@ nav ul {
     position: absolute;
     display: block;
     z-index: 1;
+    width: 290px;
 }
 .navigation li li {
     background: #F8F5F5;
+    height: 45px;
 }
 .navigation li li:hover {
     background: #EFF3F4;
@@ -188,23 +205,29 @@ h1.title {
     height: 100px;
     font-size: 90%;
 }
-.item input[type="submit"] {
+.item a {
     font-size: 95%;
     color: white;
     background: linear-gradient(to top, #2606C8, #3E71F3);
     border-radius: 15px;
     border-style: none;
     padding: 5px 10px;
+    text-decoration: none;
 }
-footer {
+.container_fluid {
+    padding-left: 100px;
+    margin-top: 55px;
+    position: absolute;
+    left: 0px;
+    width: 100%;
     display: table;
-    background: #5054E9;
+    background:linear-gradient(to top, #0F3DD2, #387DFC);
 }
 .footer_item {
     display: table-cell;
-    width: 180px;
-    height: 50px;
-    padding: 20px;
+    width: 150px;
+    padding: 10px 0px;
+    margin: 30px 0;
 }
 .footer_item ul {
     list-style: none;
@@ -212,13 +235,28 @@ footer {
     padding: 0px;
 }
 .footer_item li a {
-    font-size: 80%;
+    font-size: 85%;
     text-decoration: none;
     color: white;
 }
 .footer_item h3 {
+    padding-top: 0px; 
+    font-size: 80%;
     text-align: center;
     padding-top: 10px;
     color: white;
     text-transform: uppercase;
+}
+.footer_icons {
+    padding-left: 150px;
+}
+.border {
+    padding: 0 20px;
+    margin: 10px 0;
+    border-right: thin solid #387DFC;
+    height: 149px;
+    width: 150px;
+}
+.border_none {
+    border: none;
 }
