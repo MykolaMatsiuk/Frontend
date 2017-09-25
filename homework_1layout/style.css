@@ -1,9 +1,16 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
     width: 1150px;
-    font-style: ;
     margin: 0 auto;
     background: #EFF3F4;
     font-family: 'Drois Sans', sans-serif;
+}
+body {
+    background: #EFF3F4;
 }
 header {
     position: relative;
@@ -13,19 +20,22 @@ header {
     margin: 40px 0px 30px;
     padding-bottom: 10px;
 }
-header input[type="submit"] {
+.support {
+    width: 122px;
     position: absolute;
     right: 0px;
     bottom: 0px;
+    border-radius: 20px;
+    background: linear-gradient(to top, #CCCFD1, #E6E1E1);
+    padding: 3px 25px;
+}
+.support a {
     font-family: 'Courgette', cursive;
     text-decoration: none;
     color: #0E6EE5;
-    border-radius: 20px;
-    border-style: none;
-    padding: 3px 25px;
     font-size: 17px;
-    margin: 0px;
-    background: linear-gradient(to top, #CCCFD1, #E6E1E1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 .navigation {
     height: 50px;
@@ -52,6 +62,11 @@ nav ul {
     margin: 0px 47px;
     padding: 16px 20px;
 }
+.navigation li li a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 43px;
+}
 .navigation ul li {
     float: none;
 }
@@ -62,9 +77,11 @@ nav ul {
     position: absolute;
     display: block;
     z-index: 1;
+    width: 290px;
 }
 .navigation li li {
     background: #F8F5F5;
+    height: 45px;
 }
 .navigation li li:hover {
     background: #EFF3F4;
@@ -88,12 +105,19 @@ nav ul {
     margin: 0 auto;
 }
 .center ul {
-    margin-bottom: 58px;
+    padding-top: 10px;
+}
+.center ul li {
+    font-weight: lighter;
+    list-style: square;
 }
 .center h1 {
-    padding-top: 50px;
+    padding-top: 80px;
     font-size: 350%;
     font-stretch: ultra-condensed;
+}
+.center p {
+    padding-top: 35px;
 }
 .center a {
     position: absolute;
@@ -109,6 +133,7 @@ nav ul {
     padding: 7px 23px;
 }
 main {
+    margin-top: 30px;
     background: white;
     border-radius: 5px;
     box-shadow: 2px 2px 10px #A09F9F;
@@ -130,6 +155,7 @@ form input {
     border-style: inset;
 }
 form input[type="submit"] {
+    margin-top: 15px;
     color: white;
     padding: 3px;
     height: 25px;
@@ -140,11 +166,14 @@ form input[type="submit"] {
 }
 form textarea {
     margin-top: 5px;
-    height: 130px;
-    width: 248px;
+    height: 120px;
+    width: 240px;
 }
 form p {
+    padding-top: 15px;
+    padding-bottom: 8px;
     color: #0E6EE5;
+    font-size: 115%;
 }
 .video h1 {
     color: #045791;
@@ -156,9 +185,10 @@ h1.title {
     text-align: center;
     font-size: 160%;
     padding: 10px;
-    margin: 60px 90px;    
+    margin: 50px 90px 30px;    
 }
 .budget h1 {
+    padding-top: 30px;
     color: #396BC6;
 }
 .vidos {
@@ -166,6 +196,7 @@ h1.title {
     margin: 0 auto;
 }
 .items {
+    padding-top: 30px;
     margin-left: 20px;
     padding-bottom: 80px;
 }
@@ -174,37 +205,47 @@ h1.title {
     height: 380px;
     width: 185px;
     display: inline-block;
-    margin: 10px;
+    margin: 16px;
     padding: 7px;
 }
 .item h2 {
     font-size: 130%;
     color: #C1C2C9;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
 }
 .item p {
-    padding-left: 4px;
+    width: 178px;
+    color: #535A54;
+    padding-top: 10px;
+    padding-left: 0px;
     text-align: left;
     height: 100px;
-    font-size: 90%;
+    font-size: 85%;
+    margin-bottom: 30px;
 }
-.item input[type="submit"] {
+.item a {
     font-size: 95%;
     color: white;
     background: linear-gradient(to top, #2606C8, #3E71F3);
     border-radius: 15px;
     border-style: none;
     padding: 5px 10px;
+    text-decoration: none;
 }
 footer {
+    width: 100%;
+    margin-top: 50px;
+}
+.container_fluid {
+    padding-left: 100px;
     display: table;
-    background: #5054E9;
+    background:linear-gradient(to top, #0F3DD2, #387DFC);
 }
 .footer_item {
     display: table-cell;
-    width: 180px;
-    height: 50px;
-    padding: 20px;
+    width: 150px;
+    height: 150px;
+    margin: 10px 0;
 }
 .footer_item ul {
     list-style: none;
@@ -212,13 +253,32 @@ footer {
     padding: 0px;
 }
 .footer_item li a {
-    font-size: 80%;
+    font-size: 85%;
     text-decoration: none;
     color: white;
 }
 .footer_item h3 {
+    padding-bottom: 5px;
+    padding-top: 0px; 
+    font-size: 80%;
     text-align: center;
     padding-top: 10px;
     color: white;
     text-transform: uppercase;
+}
+.footer_icons {
+    width: 200px;
+    float: right;
+}
+.footer_icons img {
+}
+.border {
+    padding: 0 20px;
+    border-right: thin solid #387DFC;
+    height: 130px;
+    width: 200px;
+    margin-bottom: 30px;
+}
+.none {
+    border: none;
 }
