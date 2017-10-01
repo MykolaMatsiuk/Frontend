@@ -75,6 +75,13 @@ a:hover {
   left: 5px;
   margin: 10px 5px;
 }
+img.arrow {
+  padding-top: 5px;
+  padding-right: 3px;
+}
+img.gray_arrow {
+  padding-right: 10px;
+}
 img#first {
   margin-right: -130px;
   border-left: 5px solid white;
