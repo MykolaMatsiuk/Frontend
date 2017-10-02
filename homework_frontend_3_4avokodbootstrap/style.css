@@ -14,7 +14,13 @@ nav.navbar {
   font-size: 25px;
 }
 .navbar .navbar-header {
-  margin-left: 100px;
+  padding-left: 150px;
+}
+.navbar .navbar-nav {
+  padding-left: 100px;
+}
+.navbar .button {
+  padding-left: 150px;
 }
 .navbar-default .navbar-nav li a{
   color: white;
@@ -25,12 +31,6 @@ nav.navbar {
 .navbar .navbar-brand:hover {
   background-color: #22af60;
   color: white;
-}
-ul.navbar-nav {
-  margin-left: 300px;
-}
-.container-fluid button{
-  margin-left: 300px;
 }
 span.glyphicon {
   color: #2c3e50;
@@ -75,12 +75,6 @@ p.small {
   }
   .container p, h2 {
     padding-left: 0px;
-  }
-  ul.navbar-nav {
-    margin-left: 100px;
-  }
-  .container-fluid button{
-    margin-left: 100px;
   }
 }
 .second {
