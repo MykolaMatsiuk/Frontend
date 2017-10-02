@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+@media screen and (max-device-width: 1024px){
+    .container_fluid {
+        padding-left: 0px;
+    }
+}
 .container {
     width: 1150px;
     margin: 0 auto;
@@ -90,6 +95,7 @@ nav ul {
 }
 .navigation li li:hover a {
     color: #4259D0;
+    line-height: 41px;
 }
 .backgr {
     top: 10px;
@@ -110,6 +116,7 @@ nav ul {
 .center ul li {
     font-weight: lighter;
     list-style: square;
+    list-style-position: inside;
 }
 .center h1 {
     padding-top: 80px;
@@ -168,6 +175,7 @@ form textarea {
     margin-top: 5px;
     height: 120px;
     width: 240px;
+    padding: 5px;
 }
 form p {
     padding-top: 15px;
@@ -232,11 +240,10 @@ h1.title {
     padding: 5px 10px;
     text-decoration: none;
 }
-footer {
-    width: 100%;
-    margin-top: 50px;
-}
 .container_fluid {
+    margin-top: 50px;
+    width: 100%;
+    min-width: 1150px;
     padding-left: 100px;
     display: table;
     background:linear-gradient(to top, #0F3DD2, #387DFC);
@@ -267,10 +274,12 @@ footer {
     text-transform: uppercase;
 }
 .footer_icons {
-    width: 200px;
     float: right;
+    height: 30px;
+    padding: 10px 150px 0 0;
 }
 .footer_icons img {
+    padding: 5px 2px;
 }
 .border {
     padding: 0 20px;
