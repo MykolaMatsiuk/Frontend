@@ -76,10 +76,17 @@ p.small {
   .container p, h2 {
     padding-left: 0px;
   }
+  ul.navbar-nav {
+    margin-left: 100px;
+  }
+  .container-fluid button{
+    margin-left: 100px;
+  }
 }
 .second {
   background-image: url("images/plate.png");
   height: 520px;
+  margin-top: 10px;
 }
 .panel-default {
   text-align: center;
