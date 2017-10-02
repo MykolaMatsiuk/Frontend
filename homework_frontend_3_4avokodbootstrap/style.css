@@ -13,14 +13,14 @@ nav.navbar {
   font-weight: bold;
   font-size: 25px;
 }
+.row {
+  margin: 0;
+}
 .navbar .navbar-header {
-  padding-left: 150px;
 }
 .navbar .navbar-nav {
-  padding-left: 100px;
 }
 .navbar .button {
-  padding-left: 150px;
 }
 .navbar-default .navbar-nav li a{
   color: white;
