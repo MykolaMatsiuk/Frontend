@@ -19,6 +19,13 @@ nav.navbar {
 .navbar-default .navbar-nav li a{
   color: white;
 }
+.navbar-default .navbar-nav li a:hover {
+  color: #22af60;
+}
+.navbar .navbar-brand:hover {
+  background-color: #22af60;
+  color: white;
+}
 ul.navbar-nav {
   margin-left: 300px;
 }
