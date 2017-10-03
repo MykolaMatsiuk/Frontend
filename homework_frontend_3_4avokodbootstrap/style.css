@@ -16,11 +16,16 @@ nav.navbar {
 .row {
   margin: 0;
 }
-.navbar .navbar-header {
+.navbar-header {
+  padding-left: 100px;
+  text-align: center;
 }
-.navbar .navbar-nav {
+.navbar-nav {
+  padding-left: 50px;
+  text-align: center;
 }
 .navbar .button {
+  text-align: center;
 }
 .navbar-default .navbar-nav li a{
   color: white;
@@ -50,7 +55,7 @@ span.glyphicon {
   font-size: 55px;
   text-shadow: none;
   color: #555555;
-  font-weight: thin;
+  font-weight: 100;
   line-height: 65px;
 }
 .container p {
