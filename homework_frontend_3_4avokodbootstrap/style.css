@@ -8,10 +8,14 @@ nav.navbar {
   margin-bottom: 0px;
 }
 .navbar .navbar-brand {
+  float: none;
   color: #22af60;
   background-color: white;
   font-weight: bold;
   font-size: 25px;
+  margin: 0;
+  height: 44px;
+  line-height: 44px;
 }
 .row {
   margin: 0;
@@ -21,11 +25,15 @@ nav.navbar {
   text-align: center;
 }
 .navbar-nav {
-  padding-left: 50px;
+  padding-left: 120px;
   text-align: center;
 }
 .navbar .button {
   text-align: center;
+} 
+.navbar-btn {
+  margin-left: 80px;
+  padding: 6px 20px;
 }
 .navbar-default .navbar-nav li a{
   color: white;
@@ -57,19 +65,33 @@ span.glyphicon {
   color: #555555;
   font-weight: 100;
   line-height: 65px;
+  margin-top: 30px;
+}
+.carousel-caption .btn {
+  margin-top: 35px;
+  padding: 5px 25px;
+}
+.container .row {
+  margin-top: 30px;
 }
 .container p {
   line-height: 25px;
+  padding-top: 5px;
+  line-height: 25px;
 }
-.container p, h2 {
-  padding-left: 150px;
+.col-sm-6 {
+  padding-left: 125px;
 }
 .container h2 {
   padding-bottom: 10px;
-  padding-top: 10px; 
+  padding-top: 10px;
+  font-weight: 300;
+  font-size: 35px; 
 }
 p.small {
   padding: 0px;
+}
+.col-sm-6 img {
 }
 .container {
   padding-top: 20px;
@@ -85,7 +107,7 @@ p.small {
 .second {
   background-image: url("images/plate.png");
   height: 520px;
-  margin-top: 10px;
+  margin-top: 65px;
 }
 .panel-default {
   text-align: center;
@@ -107,11 +129,12 @@ p.small {
   margin-top: 50px;
 }
 .form-group .center-block {
-  padding: 2px 55px;
+  padding: 2px 95px;
 }
 .form-group h3 {
-  padding: 10px 0px 8px;
+  padding: 0;
   font-size: 35px;
+  font-weight: 100;
 }
 button[type="submit"] {
   margin-top: 15px;
