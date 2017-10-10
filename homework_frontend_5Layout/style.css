@@ -209,7 +209,6 @@ p.discription_item {
   display: none;
   background-color: #E7FBFD;
   box-shadow: 5px 5px 7px #999999;
-  overflow: none;
 }
 .hover_credit:hover .hidden_credit {
   display: block;
