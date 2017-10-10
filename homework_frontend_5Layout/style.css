@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.allcontent {
+  position: absolute;
+  margin: 10px;
+  height: 1070px;
+  border-top: 1px solid #D0CFCF;
+  border-left: 1px solid #D0CFCF;
+}
+img.main_info {
+  width: 210px;
+  height: 190px;
+}
+.box {
+  position: relative;
+  width: 19%;
+  min-width: 240px;
+  height: 400px;
+  float: left;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 2px;
+  padding-top: 15px;
+  border-right: 1px solid #D0CFCF;
+  border-bottom: 1px solid #D0CFCF;
+}
+.info {
+  z-index: 1;
+  position: absolute;
+  top: -11px;
+  left: -11px;
+  width: 260px;
+  height: 680px;
+  padding: 10px 20px 0;
+  padding-top: 25px;
+  border: 1px solid #D0CFCF;
+  background-color: white;
+  display: none;
+  box-shadow: -1px -1px 10px 2px #D0CFCF;
+}
+.box:hover .info {
+  display: block;
+}
+.box .top {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 5px;
+  background-color: #FB8A1B;
+  color: white;
+  border-radius: 10px;
+  font-size: larger;
+}
+.info .top {
+  top: 15px;
+  left: 15px;
+}
+.box .saling {
+  background-color: #F35252;
+  padding: 5px 10px;
+}
+.info .saling {
+ background-color: #F35252;
+ padding: 5px 10px; 
+}
+.box .exclusive {
+  background-color: #F22EA1;
+}
+.info .exclusive {
+  background-color: #F22EA1;
+}
+.gift p {
+  color: white;
+  font-size: 10px;
+  background-color: #F31A1A;
+}
+.gift {
+  padding-bottom: 0px;
+  background-color: white;
+}
+.gift {
+  position: absolute;
+  border: 1px solid #F31A1A;
+}
+.box .gift {
+  top: 120px;
+  left: 5px;
+}
+.info .gift {
+  top: 130px;
+  left: 15px;
+}
+.sale {
+  position: absolute;
+  background-color: white;
+  opacity: 0.8;
+}
+.sale a {
+  color: #F31A1A;
+  text-decoration: none;
+}
+.sale a:hover {
+  text-decoration: underline dotted #F31A1A;
+}
+.box .sale {
+  top: 190px;
+}
+.info .sale {
+  top: 200px;
+}
+.info .sale p {
+  padding-right: 5px;
+}
+.title {
+  margin-top: 40px;
+}
+p.end {
+  color: #F99410;
+  font-weight: bolder;
+  padding: 5px 0;
+}
+.title a, .titleO a {
+  text-decoration: none;
+}
+.title a:hover, .titleO a:hover {
+  color: #F31A1A;
+  text-decoration: underline;
+}
+.price_end {
+  background-color: #EAC441;
+  padding: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  border: 0.5px solid #FAAA0F;
+}
+.price {
+  background-color: #FECFB6;
+  padding: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+.stars a {
+  text-decoration: none;
+  font-size: 13px;
+}
+.stars a:hover {
+  text-decoration: underline;
+  color: #F31A1A;
+}
+.line_through {
+  background-color: white;
+  text-decoration: line-through solid #F31A1A;
+  color: gray;
+}
+.red {
+  color: #F31A1A;
+}
+p.smaller {
+  font-size: 13px;
+  margin: 5px 0;
+}
+.buy {
+  margin: 10px;
+}
+.buy img:hover {
+  border: 1px solid magenta;
+  border-radius: 3px;
+  padding: 0 4px;
+}
+.buy img {
+  border-right: 1px solid #D0CFCF;
+  padding: 1px 5px;
+}
+img.last {
+  border: none;
+}
+img.heart:hover {
+  padding-right: 5px;
+}
+img.basket:hover {
+  padding-right: 5px;
+}
+.credit img {
+  padding: 0 5px;
+}
+img.italy {
+  padding-bottom: 7px;
+}
+.gray {
+  color: gray;
+}
+p.discription_item {
+  font-size: 15px;
+  padding: 1px 0;
+}
+.hover {
+  width: 50px;
+  display: inline-block;
+}
+.hidden {
+  z-index: 2;
+  position: absolute;
+  padding: 10px 15px;
+  border-radius: 3px;
+  width: 600px;
+  display: none;
+  background-color: #E7FBFD;
+  box-shadow: 5px 5px 7px #999999;
+  overflow: none;
+}
+.hover_credit:hover .hidden_credit {
+  display: block;
+}
+.hover_stars:hover .hidden_stars {
+  display: block;
+}
+.discription {
+  margin-top: 10px;
+}
