@@ -205,7 +205,7 @@ p.discription_item {
   position: absolute;
   padding: 10px 15px;
   border-radius: 3px;
-  width: 600px;
+  width: 100%;
   display: none;
   background-color: #E7FBFD;
   box-shadow: 5px 5px 7px #999999;
