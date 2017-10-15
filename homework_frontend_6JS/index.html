@@ -6,8 +6,154 @@
 </head>
 <body>
   <script>
+    window.onload = function() {
+      // first task
+      var number = prompt("Enter please number");
+      var array = [];
+      for (var i = 0; i < number; i++) {
+        array.push(i);
+      }
+      console.log(array);
+    
+      //second task
+      var arraySecond = [];
+      var i = 0;
+      while (i < number) {
+        arraySecond.push(i*i);
+        i++;
+      }
+      console.log(arraySecond);
 
+      //third task
+      var arrayThird = [];
+      for (var i = 0; i < number; i++) {
+        if(i % 2 === 0) {
+          arrayThird.push(1);
+        } else {
+          arrayThird.push(i % 5);
+        }
+      }
+      console.log(arrayThird);
+  
+      //fourth task
+      var arrayFourth = [];
+      for(var i = 0; i < number; i++) {
+        arrayFourth.push(i)
+      }
+      console.log(arrayFourth.sort(random));
+
+      //fifth task
+      var arrayFifth = [];
+      for(var i = 0; i < 10; i++) {
+        var rand = Math.floor(Math.random()*10);
+        arrayFifth[i] = rand;
+        var x = 3;
+        if(x === arrayFifth[i]) {
+          alert("The number 3 is in an array!");
+        }
+      }
+      console.log(arrayFifth);
+
+      //sixth task
+      var count = 0;
+      for(var i = 0; i < arrayFifth.length; i++) {
+        if(arrayFifth[i] % 2 == 0) {
+          count++;
+        }
+      }
+      console.log(count);
+
+      //seventh task
+      var sum = 0;
+      for(var i = 0; i < arrayFifth.length; i++) {
+        if(arrayFifth[i] % 2 == 0) {
+          sum += arrayFifth[i];
+        }
+      }
+      console.log(sum);
+
+      //eighth task
+      var sum2 = 0;
+      for(var i = 0; i < arrayFifth.length; i++) {
+        if(i % 2 == 0) {
+          sum2 += arrayFifth[i];
+        }
+      }
+      console.log(sum2);
+
+      //ninth task
+      var maxValue = 0;
+      for(var i = 0; i < arrayFifth.length; i++) {
+        (arrayFifth[i] > maxValue) ? maxValue = arrayFifth[i] : maxValue;
+      }
+      console.log(maxValue);
+
+      //tenth task
+      var repeatElements = [];
+      for(var i = 0; i < arrayFifth.length; i++) {
+        for(var j = i - 1; j >= 0; j--) {
+          if(arrayFifth[i] == arrayFifth[j]) {
+            var isUnique = true;
+            for(k = 0; k < repeatElements.length; k++) {
+              if(repeatElements[k] == arrayFifth[i]) {
+                isUnique = false;
+                break;
+              }
+            }
+            if (isUnique) {
+              repeatElements.push(arrayFifth[i]);
+            }
+            break;
+          }
+        }
+      }
+      console.log(repeatElements);
+
+      //eleventh task       код не хороший, нужна подсказка...
+      arrayFifth.sort();
+      var count = 2;
+      for(var i = 0; i < arrayFifth.length; i++) {
+        for(var k = 2; k < arrayFifth.length; k++) {
+          if(arrayFifth[i] == arrayFifth[i + k]) {
+            count++;
+            arrayFifth.splice(i, count);
+          }
+        }
+      }
+      console.log(arrayFifth);
+
+      //twelfth task
+      var arrayTwelfth = [[],[],[],[],[]];
+      var arraySimple = [];
+      for(var i = 0; i < 5; i++) {
+        for(var j = 0; j < 5; j++) {
+          var rand = Math.floor(Math.random()*100);
+          arrayTwelfth[i][j] = rand;
+        }
+      }
+      for(var k = 0; k < 5; k++) {
+        arraySimple[k] = arrayTwelfth[k][k];
+      }
+      console.log(arrayTwelfth);
+      console.log(arraySimple);
+
+      //task thirteenth
+      var summa = 0;
+      for(var i = 0, k = 4; k >= 0, i < 5; i++, k--) {
+        summa += arrayTwelfth[i][i];
+        summa += arrayTwelfth[i][k];
+      }
+      /*var j = 0;
+      var k = 4;
+      do {
+        summa += arrayTwelfth[j][k];
+        j++;
+        k--;
+      } while (j < 5, k >= 0);*/
+      console.log(summa);
+
+    }
   </script>
-<!--  <script src="functions.js"></script> -->
+  <script src="functions.js"></script>
 </body>
 </html>
