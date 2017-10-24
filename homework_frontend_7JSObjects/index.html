@@ -13,7 +13,7 @@
         brand: 'Nissan',
         engine: 'diesel',
         color: 'red',
-        convertible: false,
+        name: 'Rocket',
         new: true,
         getBrand: function () {
           console.log(this.brand);
@@ -28,15 +28,15 @@
       vehicle.getColor = function () {
         console.log(this.color);
       }
-      vehicle.getConvertible = function () {
-        console.log(this.convertible);
+      vehicle.getName = function () {
+        console.log(this.name);
       }
       vehicle.isNew = function () {
         console.log(this.new);
       }
       vehicle.getEngineType();
       vehicle.getColor();
-      vehicle.getConvertible();
+      vehicle.getName();
       vehicle.isNew();
       vehicle.getBrand();
 
@@ -60,7 +60,45 @@
       vehicleCollection.addTo(vehicle);
       vehicleCollection.get();
       
-      //
+      //4. Создать два объекта bike & car 
+      //от объекта vehicle
+      //4.1 Установить соотвествующии название 
+      //для каждого из объекта (на примере bike.setName('bike');
+      // car.setName('car'));
+      //4.2 Вывести на экран название каждого из объектов 
+      //для bike and car;
+      var car = {
+        brand: 'Porshe',
+        setName: function (name) {
+          return this.name = name;
+        }
+      }
+      car.setName('car');
+      alert(car.name);
+
+      var bike = {
+        brand: 'Harley',
+        setName: function (name) {
+          return this.name = name;
+        }
+      }
+      bike.setName('bike');
+      alert(bike.name);
+
+      //5. Добавить в объект vehicleCollection 
+      //созданые объекты в пункте 4 bike and car;
+      vehicleCollection.addTo(car);
+      vehicleCollection.addTo(bike);
+      
+      //5.1 Вывести в консоле цикл содержимого массива
+      // objects объекта vehicleCollection свойство name
+      //(на примере item.getName() => item это объект,
+      // который был создан в пункте 4);
+      vehicleCollection.objects.forEach(function (value) {
+        console.log(value.name);
+      });
+
+
     }
   </script>
 </body>
