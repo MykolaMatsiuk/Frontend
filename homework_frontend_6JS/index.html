@@ -89,7 +89,7 @@
       console.log(maxValue);
 
       //tenth task
-      var repeatElements = [];
+      /*var repeatElements = [];
       for(var i = 0; i < arrayFifth.length; i++) {
         for(var j = i - 1; j >= 0; j--) {
           if(arrayFifth[i] == arrayFifth[j]) {
@@ -107,10 +107,20 @@
           }
         }
       }
+      console.log(repeatElements);*/
+      var repeatElements = [];
+      var buffer;
+      arrayFifth.sort();
+      arrayFifth.forEach(function (item) {
+        if (buffer == item && repeatElements.indexOf(buffer) < 0) {
+          repeatElements.push(item);
+        };
+        buffer = item;
+      });
       console.log(repeatElements);
 
       //eleventh task       код не хороший, нужна подсказка...
-      arrayFifth.sort();
+      /*arrayFifth.sort();
       var count = 2;
       for(var i = 0; i < arrayFifth.length; i++) {
         for(var k = 2; k < arrayFifth.length; k++) {
@@ -120,6 +130,18 @@
           }
         }
       }
+      console.log(arrayFifth);*/
+      var buffer;
+      var repeat;
+      arrayFifth.forEach(function (item, i) {
+        if (buffer == item && repeat >= 2) {
+          delete(arrayFifth[i]);
+        } else if (buffer != item) {
+          repeat = 0;
+        };
+        buffer = item;
+        repeat++;
+      });
       console.log(arrayFifth);
 
       //twelfth task
@@ -138,8 +160,7 @@
       console.log(arraySimple);
 
       //task thirteenth
-      var summa = 0;
-      for(var i = 0, k = 4; k >= 0, i < 5; i++, k--) {
+      for(var i = 0, k = 4, summa = 0; k >= 0, i < 5; i++, k--) {
         summa += arrayTwelfth[i][i];
         summa += arrayTwelfth[i][k];
       }
