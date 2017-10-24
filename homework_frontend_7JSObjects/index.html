@@ -6,7 +6,62 @@
 </head>
 <body>
   <script>
-    
+    window.onload = function () {
+      //1. Создать объект vehicle у которого будут 
+      //базовые свойства относящиеся ко всей группе.
+      var vehicle = {
+        brand: 'Nissan',
+        engine: 'diesel',
+        color: 'red',
+        convertible: false,
+        new: true,
+        getBrand: function () {
+          console.log(this.brand);
+        }
+      };
+
+      //2. В созданном объекте vehicle добавить 
+      //базовые методы доступа к этим свойствам.
+      vehicle.getEngineType = function () {
+        console.log(this.engine);
+      }
+      vehicle.getColor = function () {
+        console.log(this.color);
+      }
+      vehicle.getConvertible = function () {
+        console.log(this.convertible);
+      }
+      vehicle.isNew = function () {
+        console.log(this.new);
+      }
+      vehicle.getEngineType();
+      vehicle.getColor();
+      vehicle.getConvertible();
+      vehicle.isNew();
+      vehicle.getBrand();
+
+      //3. Создать объект vehicleCollection, который 
+      //будет хранить в себе объекты vehicle
+      //3.1 Свойство objects с типом array;
+      //3.2 Метод addTo, который будет принимать на вход
+      // объект vehicle и добавлять в массив objects;
+      //3.3 Метод get, который вернет содержимое 
+      //this.objects объекта vehicle;
+      var vehicleCollection = {
+        vehicle,
+        objects: [],
+        addTo: function (vehicle) {
+          return this.objects.push(vehicle);
+        },
+        get: function () {
+          return this.objects;
+        }
+      };
+      vehicleCollection.addTo(vehicle);
+      vehicleCollection.get();
+      
+      //
+    }
   </script>
 </body>
 </html>
