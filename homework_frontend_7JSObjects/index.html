@@ -67,23 +67,25 @@
       // car.setName('car'));
       //4.2 Вывести на экран название каждого из объектов 
       //для bike and car;
-      var car = {
-        brand: 'Porshe',
-        setName: function (name) {
-          return this.name = name;
+      var car = Object.create(vehicle, {
+        brand: {
+          value: 'Porsche'
         }
+      });
+      
+      vehicle.setName = function (name) {
+        return this.name = name;
       }
       car.setName('car');
-      alert(car.name);
+      document.write(car.name + "<br>");
 
-      var bike = {
-        brand: 'Harley',
-        setName: function (name) {
-          return this.name = name;
+      var bike = Object.create(vehicle, {
+        brand: {
+          value: 'Harley'
         }
-      }
+      });
       bike.setName('bike');
-      alert(bike.name);
+      document.write(bike.name + "<br>");
 
       //5. Добавить в объект vehicleCollection 
       //созданые объекты в пункте 4 bike and car;
