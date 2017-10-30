@@ -14,7 +14,7 @@
         engine: 'diesel',
         color: 'red',
         name: 'Rocket',
-        new: true,
+        newCar: true,
         getBrand: function () {
           console.log(this.brand);
         }
@@ -24,16 +24,16 @@
       //базовые методы доступа к этим свойствам.
       vehicle.getEngineType = function () {
         console.log(this.engine);
-      }
+      };
       vehicle.getColor = function () {
         console.log(this.color);
-      }
+      };
       vehicle.getName = function () {
         console.log(this.name);
-      }
+      };
       vehicle.isNew = function () {
-        console.log(this.new);
-      }
+        console.log(this.newCar);
+      };
       vehicle.getEngineType();
       vehicle.getColor();
       vehicle.getName();
