@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Bases</title>
+</head>
+<body>
+  <script>
+    window.onload = function () {
+      //1) Напишите функцию, которая возвращает последнюю 
+      //цифру заданного числа, вместо цифры на выходе 
+      //отобразить слово. К примеру: 128 -> «восемь»
+      function lastNumber (number) {
+        var arr = number.toString().split('');
+        var lastChild = arr[arr.length - 1];
+        var numbers = ['zero', 'one', 'two', 'three', 'four', 'five', 
+                        'six', 'seven', 'eight', 'nine'];
+        var i = 0, length = numbers.length;
+        for (; i < length; i++) {
+          if (numbers.indexOf(numbers[i]) == lastChild) {
+            return numbers[i];
+          }
+        }
+      }
+      console.log(lastNumber(123));
+
+      //2) Напишите функцию, которая меняет цифры или слова 
+      //в обратном порядке. Пример: 1024 -> 4201 или 
+      //Английский -> йиксйилгнА.
+      function reverse (input) {
+          return input.toString().split('').reverse().join('');
+      }
+      console.log(reverse('hello'));
+
+      //3) Создать функцию - расширение, которая будет 
+      //на входе принимать два объекта (objA и objB) и 
+      //объединять их в один (objC)
+      var objA = {
+        name: 'john'
+      };
+      var objB = {
+        greeting: 'hi'
+      };
+      function join (oA, oB) {
+        objC = {};
+        Object.assign(objC, oA, oB);
+        return objC; 
+      }
+      console.log(join(objA, objB));
+
+      //4) Напишите функцию, которая найдет самого 
+      //молодого человека в определенном массиве людей 
+      //и выведет результат в виде ФИO. У каждого 
+      //человека должны быть firstName, lastName и age
+      var arr = [
+        {
+          firstName: 'Jonh',
+          lastName: 'Johny',
+          age: 42
+        },
+        {
+          firstName: 'Carrol',
+          lastName: 'Carrot',
+          age: 33
+        },
+        {
+          firstName: 'Smith',
+          lastName: 'Dunkel',
+          age: 44
+        },
+        {
+          firstName: 'Duke',
+          lastName: 'Dumont',
+          age: 18
+        }
+      ];
+      function theJungestPerson (array) {
+        var jung = 100, name = '';
+        array.forEach(function (value) {
+          if (value.age < jung) {
+            jung = value.age;
+            name = value.firstName + " " + value.lastName;
+          }
+        })
+        return name;
+      }
+      console.log(theJungestPerson(arr));
+
+      //5) Напишите функцию, которая группирует массив 
+      //людей по первой букве имени и возвращает группы как 
+      //объект JavaScript. Желательно без использования циклов.
+      var arr = ['Bobby', 'Helen', 'Jorje', 'Harris', 'Barney'];
+      /*function group (array) {
+        var letters = [],
+            groups = [];
+        for (var i = 0; i < array.length; i++) {
+          if (letters.indexOf(array[i][0]) == -1) {
+            letters.push(array[i][0]);
+          }
+        for (var j = 0; j < letters.length; j++) {
+          letters[j] = [];
+          if (letters[j] == array[i][0]) {
+            letters[j].push(array[i])
+          }
+        }
+        }
+        return letters;
+      }*/
+      function group (array) {
+        array.sort();
+        for (var i = 0; i < array.length; i++) {
+          if (array[i][0] !== array[i + 1][0]) {
+            array.slice(0, array[i + i]);
+          }
+        }
+        return array;
+      }
+      console.log(group(arr));
+    }
+
+    //6) Создать функцию конструктор для товара, в котором 
+    //должны быть свойства, методы и скрытые параметры (маржа 
+    //и она может быть разной в зависимости от типа товара).
+    function Good (name, type) {
+      this.name = name,
+      this.type = type,
+      this.margin = function (type) {
+
+      }
+    }
+
+    //7) Создать функцию для инициализации плеера, в которой 
+    //в качестве аргумента будет приходить опции плеера, другой 
+    //аргумент передает тип устройства (desktop, laptop, tablet, 
+    //mobile), где в зависимости от типа будут передаваться размеры плеера.
+    function player (option, deviceType) {
+      if (deviceType == desktop) {
+
+      }
+    }
+  </script>
+</body>
+</html>
