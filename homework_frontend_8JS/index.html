@@ -90,53 +90,96 @@
       //людей по первой букве имени и возвращает группы как 
       //объект JavaScript. Желательно без использования циклов.
       var arr = ['Bobby', 'Helen', 'Jorje', 'Harris', 'Barney'];
-      /*function group (array) {
-        var letters = [],
-            groups = [];
-        for (var i = 0; i < array.length; i++) {
-          if (letters.indexOf(array[i][0]) == -1) {
-            letters.push(array[i][0]);
-          }
-        for (var j = 0; j < letters.length; j++) {
-          letters[j] = [];
-          if (letters[j] == array[i][0]) {
-            letters[j].push(array[i])
-          }
-        }
-        }
-        return letters;
-      }*/
+      //Initial method
       function group (array) {
-        array.sort();
-        for (var i = 0; i < array.length; i++) {
-          if (array[i][0] !== array[i + 1][0]) {
-            array.slice(0, array[i + i]);
+        var letters = [];
+        var groups = {};
+        array.forEach(function (value) {
+          if (letters.indexOf(value.charAt(0)) == -1) {
+            letters.push(value.charAt(0));
           }
-        }
-        return array;
+          for (var i = 0; i < letters.length; i++) {
+            groups[letters[i]] = [];
+            for (var j = 0; j < array.length; j++) {
+              if (array[j][0] == letters[i]) {
+                groups[letters[i]].push(array[j]);
+              }
+            }
+          }
+        })
+        return groups;
       }
+      //второй способ, но он не корректно работает, было бы не плохо 
+      //если бы вы привели пару примеров своего решения разными способами... 
+      /*function group (array) {
+        var groups = {},
+            letters = [];
+        array.forEach(function (name) {
+          if (letters.indexOf(name.charAt(0)) == -1) {
+            letters.push(name.charAt(0));
+          }
+          letters.forEach(function (letter) {
+            if (letter == name.charAt(0)) {
+              groups[letter] = [];
+              groups[letter].push(name);
+            }
+          })
+        })
+        return groups;
+      }*/
       console.log(group(arr));
-    }
 
-    //6) Создать функцию конструктор для товара, в котором 
-    //должны быть свойства, методы и скрытые параметры (маржа 
-    //и она может быть разной в зависимости от типа товара).
-    function Good (name, type) {
-      this.name = name,
-      this.type = type,
-      this.margin = function (type) {
-
+      //6) Создать функцию конструктор для товара, в котором 
+      //должны быть свойства, методы и скрытые параметры (маржа 
+      //и она может быть разной в зависимости от типа товара).
+      function Good (name, type, sellingPrice, startPrice) {
+        this.name = name;
+        this.getName = function () {
+          console.log(this.name);
+        };
+        this.type = type;
+        this.sellingPrice = sellingPrice;
+        this.startPrice = startPrice;
+        this.margin = sellingPrice - startPrice;
       }
-    }
 
-    //7) Создать функцию для инициализации плеера, в которой 
-    //в качестве аргумента будет приходить опции плеера, другой 
-    //аргумент передает тип устройства (desktop, laptop, tablet, 
-    //mobile), где в зависимости от типа будут передаваться размеры плеера.
-    function player (option, deviceType) {
-      if (deviceType == desktop) {
-
+      //7) Создать функцию для инициализации плеера, в которой 
+      //в качестве аргумента будет приходить опции плеера, другой 
+      //аргумент передает тип устройства (desktop, laptop, tablet, 
+      //mobile), где в зависимости от типа будут передаваться размеры плеера.
+      function player (option, deviceType) {
+        var width,
+            action;
+        switch (option) {
+          case (play):
+            action = function () {
+              console.log('playing...');
+            }
+            break;
+          case (stop):
+            action = function () {
+              console.log('stop playing.');
+            }
+            break;
+          default:
+            action = function () {
+              console.log('there is no such action!');
+            }
+        }
+        if (deviceType == 'desktop') {
+          return width = '1200px';
+        } else if (deviceType == 'laptop') {
+          return width = '1000px';
+        } else if (deviceType == 'tablet') {
+          return width = '800px';
+        } else if (deviceType == 'mobile') {
+          return width = '600px';
+        } else {
+          return 'incorrect device Type';
+        }
       }
+
+
     }
   </script>
 </body>
