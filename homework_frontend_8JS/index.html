@@ -91,7 +91,7 @@
       //объект JavaScript. Желательно без использования циклов.
       var arr = ['Bobby', 'Helen', 'Jorje', 'Harris', 'Barney'];
       //Initial method
-      function group (array) {
+      /*function group (array) {
         var letters = [];
         var groups = {};
         array.forEach(function (value) {
@@ -108,10 +108,10 @@
           }
         })
         return groups;
-      }
+      }*/
       //второй способ, но он не корректно работает, было бы не плохо 
       //если бы вы привели пару примеров своего решения разными способами... 
-      /*function group (array) {
+      function group (array) {
         var groups = {},
             letters = [];
         array.forEach(function (name) {
@@ -120,13 +120,12 @@
           }
           letters.forEach(function (letter) {
             if (letter == name.charAt(0)) {
-              groups[letter] = [];
-              groups[letter].push(name);
+              groups[letter] += " " + name;
             }
           })
         })
         return groups;
-      }*/
+      }
       console.log(group(arr));
 
       //6) Создать функцию конструктор для товара, в котором 
