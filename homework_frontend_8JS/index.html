@@ -22,7 +22,7 @@
           }
         }
       }
-      console.log(lastNumber(123));
+      console.log(lastNumber(127));
 
       //2) Напишите функцию, которая меняет цифры или слова 
       //в обратном порядке. Пример: 1024 -> 4201 или 
@@ -111,7 +111,7 @@
       }*/
       //второй способ, но он не корректно работает, было бы не плохо 
       //если бы вы привели пару примеров своего решения разными способами... 
-      function group (array) {
+      /*function group (array) {
         var groups = {},
             letters = [];
         array.forEach(function (name) {
@@ -125,9 +125,37 @@
           })
         })
         return groups;
-      }
-      console.log(group(arr));
+      }*/
+      //filter method
+      /*function group (arr, key) {
 
+            return arr.filter(function(arr2) {
+
+                return arr2[0] === key;
+
+            });
+
+      }
+      console.log(group(arr, 'B'));*/
+
+      function group(arr, key) {
+
+        var answer = [];
+
+          arr.forEach(function (item, i) {
+
+              if (arr[i][0] === key) {
+
+                  answer.push(arr[i]);
+
+              }
+
+          });
+
+        return answer;
+
+      }
+      console.log(group(arr, 'H'))
       //6) Создать функцию конструктор для товара, в котором 
       //должны быть свойства, методы и скрытые параметры (маржа 
       //и она может быть разной в зависимости от типа товара).
@@ -153,17 +181,17 @@
           case (play):
             action = function () {
               console.log('playing...');
-            }
+            };
             break;
           case (stop):
             action = function () {
               console.log('stop playing.');
-            }
+            };
             break;
           default:
             action = function () {
               console.log('there is no such action!');
-            }
+            };
         }
         if (deviceType == 'desktop') {
           return width = '1200px';
