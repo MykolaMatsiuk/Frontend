@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Objects</title>
+</head>
+<body>
+  <script>
+    window.onload = function () {
+      function Book (title, author, genre, year) {
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.year = year;
+        this.buyBook = function (persName) {
+          console.log("Congratulations, " + persName + ", you've bought a book '"
+                       + this.title + "'.");
+        };
+        this.myFavorite = function () {
+          console.log("My favorite book is '" + this.title + "'.");
+        };
+      };
+
+      var bookOne = new Book ('The Adventures of Tom Sawyer', 'Mark Twain',
+                              'Fiction', 1876);
+      var bookTwo = new Book ('The Origin of Species', 'Charles Darwin',
+                              'Non-Fiction', 1856);
+      var bookThree = new Book ('Romeo and Juliet', 'William Shakespeare', 
+                                'Play', 1594);
+      //console.log(bookThree.title);
+
+      var aboutBook = function () {
+        console.log("The book '" + this.title + "' was written by " + this.author +
+                    " in " + this.year + ". This is " + this.genre + ".");
+      };
+      aboutBook.call(bookOne);
+
+      function bookYear (name, estYear) {
+        console.log(this[name] + " " + this[estYear] + ".");
+      };
+      var args = ['title', 'year'];
+      bookYear.apply(bookTwo, args);
+
+      bookTwo.buyBook('Viktor');
+
+      function bind (func, context) {
+        return function () {
+          return func.apply(context, arguments);
+        };
+      };
+      setTimeout(bind(bookThree.myFavorite, bookThree), 2000);
+      var buyBook = bind(bookOne.buyBook, bookOne);
+      buyBook('Jane');
+    }
+  </script>
+</body>
+</html>
