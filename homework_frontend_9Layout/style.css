@@ -264,7 +264,7 @@ div.divTableRow:nth-child(even) {
   position: relative;
   width: 50%;
   float: left;
-  border: 2px dashed red;
+  border: 2px dashed #D0020C;
   height: 170px;
   border-right: none;
 }
@@ -284,35 +284,70 @@ div.divTableRow:nth-child(even) {
   left: 15px;
 }
 .next {
+  position: relative;
   height: 170px;
   margin-left: 50%;
-  border: 2px solid red;
+  border: 2px solid #D0020C;
 }
-.table {
-  display: table;
+.next p {
+  font-size: 80%;
 }
-.tableRow {
-  display: table-cell;
-}
-.left {
-  padding: 10px;
-  width: 200px;
-  border-right: 1px solid lightgray;
-}
-.right {
-  float: right;
-  width: 200px;
-  padding: 10px;
+.next p.botItem {
+  padding-top: 15px;
+  padding-left: 20px;
+  font-size: 120%;
+  font-weight: bolder;
+  color: black;
 }
 a.faq {
+  position: absolute;
+  top: 20px;
+  right: 25px;
   float: right;
+  color: #06A3E5;
+  padding-right: 5px;
+}
+.right, .left {
+  padding: 20px 20px;
+}
+.right p {
+  padding-top: 38px;
+}
+button {
+  margin-top: 10px;
+  color: white;
+  width: 160px;
+  height: 40px;
+  font-size: 90%;
+  border: none;
+}
+button.red {
+  background-color: #D0020C;
+  border: 2px solid #940202;
+}
+button.greenBut {
+  background-color: green;
+  border: 2px solid #064701;
+}
+.next {
+  -webkit-column-width: 200px;
+  -moz-column-width: 200px;
+  column-width: 200px;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
 }
 .or {
+  color: #940202;
   position: absolute;
   top: 40%;
-  left: 70%;
+  left: 45%;
   border-radius: 50%;
-  border: 2px solid red;
+  border: 2px solid #efefef;
+  padding: 5px;
 }
 ul {
   list-style: inside;
@@ -323,5 +358,6 @@ li {
   margin-left: 20px;
 }
 footer {
-  margin-top: 30px;
+  text-align: center;
+  color: #f5f5f5;
 }
