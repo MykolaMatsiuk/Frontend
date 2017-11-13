@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    window.onload = function () {
+      function HouseholdAppliances (addSupl) {
+        var typeOfGood = '';
+        this.addSupl = addSupl;
+        this.setBrand = function (brand) {
+          return this.brand = brand;
+        };
+        this.setType = function (type) {
+          typeOfGood = type;
+        };
+        this.getType = function () {
+          return typeOfGood;
+        };
+        var additionalSupplying = function () {
+          alert("Connect " + this.addSupl)
+        }.bind(this);
+        this.set = function () {
+          additionalSupplying();
+        };
+        var done = function () {
+          alert("Done!");
+        };
+        var workingTime = function () {
+          return 2000;
+        };
+        this.start = function () {
+          setTimeout(done, workingTime());
+        };
+      }
+      var washMach = new HouseholdAppliances('water');
+      washMach.setBrand('Bosch');
+      washMach.setType('washing machine');
+      console.log(washMach.getType());
+      washMach.set();
+      var toster = new HouseholdAppliances();
+      toster.brand = 'Saturn';
+      console.log(toster.brand);
+      toster.start();
+    }
+  </script>
+</body>
+</html>
