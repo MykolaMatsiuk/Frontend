@@ -74,7 +74,12 @@
       petya.__proto__ = drummer;
       petya.play();
 
+      backendProgrammer.__proto__ = programmer;
       for (var key in backendProgrammer) {
+        console.log(key + " = " + backendProgrammer[key]);
+      };
+      for (var key in backendProgrammer) {
+        if (!backendProgrammer.hasOwnProperty(key)) continue;
         console.log(key + " = " + backendProgrammer[key]);
       };
 
