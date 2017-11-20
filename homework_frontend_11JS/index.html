@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Objects proto</title>
+</head>
+<body>
+  <script>
+    window.onload = function () {
+      function Human () {
+        this.talk = true,
+        this.hands = 2,
+        this.greets = function (greetingWord) {
+          console.log(this.name + " says " + greetingWord + "!");
+        },
+        this.setName = function (name) {
+          return this.name = name;
+        }
+      };
+      var petya = new Human();
+      petya.setName('Petya');
+      petya.greets('Bon Journo');
+      console.log(petya.talk);
+      console.log(petya.hands);
+      
+      var musician = {
+        teacherInMusicianSchool: true,
+        workExperience: '',
+        nationality: 'ukrainian',
+        play: function () {
+          console.log("plays for different audience");
+        }
+      };
+
+      var programmer = {
+        teacherInProgrammingSchool: true,
+        nationality: 'ukrainian',
+        workExperience: '' | 5
+      };
+
+      petya.__proto__ = musician;
+      petya.play();
+      petya.workExperience = 6;
+      console.log(petya.workExperience);
+      var sasha = new Human();
+      sasha.__proto__ = programmer;
+      console.log(sasha.workExperience);
+      console.log(sasha.nationality);
+
+      var frontendProgrammer = {
+        programmingLanguage: 'Javascript',
+        framework: ['Angular', 'ReactJS', 'Vue.js'],
+        freelance: true
+      };
+
+      var backendProgrammer = {
+        programmingLanguage: 'PHP',
+        framework: ['Laravel', 'Symfony'],
+        freelance: true
+      };
+
+      var drummer = {
+        drumsALot: true,
+        drumSticks: 'wood',
+        play: function () {
+          console.log("drum param pam!");
+        }
+      }
+
+      sasha.__proto__ = backendProgrammer;
+      sasha.setName('Alexandra');
+      console.log(sasha.name + " likes " + sasha.framework[0]);
+
+      petya.__proto__ = drummer;
+      petya.play();
+
+      for (var key in backendProgrammer) {
+        console.log(key + " = " + backendProgrammer[key]);
+      };
+
+      console.log(Object.keys(backendProgrammer));
+      console.log(Object.keys(drummer));
+
+
+    }
+  </script>
+</body>
+</html>
