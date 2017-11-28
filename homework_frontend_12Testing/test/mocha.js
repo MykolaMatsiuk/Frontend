@@ -59,6 +59,22 @@ describe('Testing', function() {
       assert.isUndefined(unknown);
     });
   });
+  describe('Variables none and unknown', function() {
+    it('variables are strict not equal', function() {
+      assert.notStrictEqual(unknown, none);
+    });
+    it('variables are equal', function() {
+      assert.equal(unknown, none);
+    });
+  });
+  describe('Constructor and object compare', function() {
+    it('is animal is constructor of rabbit', function() {
+      assert.instanceOf(rabbit, Animal);
+    });
+    it('rabbit is empty object', function() {
+      assert.isEmpty(rabbit, fur);
+    });
+  });
 });
 
 mocha.run();

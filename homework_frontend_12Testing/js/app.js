@@ -22,7 +22,6 @@ var human = {
  *  n - amount of numbers
  *  return array
  */
-
 var arithProg = function (a1, d, n) {
   var arr = [a1];
   for (var i = 1; i < n; i++) {
@@ -32,3 +31,11 @@ var arithProg = function (a1, d, n) {
 };
 
 var unknown;
+
+var none = null;
+
+function Animal() {
+  fur = true;
+};
+
+var rabbit = new Animal();
