@@ -39,3 +39,4 @@ function Animal() {
 };
 
 var rabbit = new Animal();
+

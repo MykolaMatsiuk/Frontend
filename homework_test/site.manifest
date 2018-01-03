@@ -1,0 +1,12 @@
+CACHE MANIFEST
+# 2017-12-20:v1
+
+CACHE:
+index.html
+app.js
+
+NETWORK:
+*
+
+FALLBACK:
+/ / offline.html
