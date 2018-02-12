@@ -2,14 +2,22 @@
   "name": "angular_products_list",
   "version": "1.0.0",
   "description": "making items list using angular, bootstrap",
-  "main": "src/main.js",
+  "main": "src/scripts/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/scripts/main.js"
   },
   "author": "gonzoman",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.9",
-    "bootstrap": "^4.0.0"
+    "bootstrap": "^4.0.0-alpha.6",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.2.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-stylus": "^2.7.0",
+    "jquery": "^3.3.1",
+    "nib": "^1.1.2",
+    "stylus": "^0.54.5"
   }
 }
