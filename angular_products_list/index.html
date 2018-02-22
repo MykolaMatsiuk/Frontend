@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+  <script src="node_modules/angular/angular.js" defer></script>
+  <script src="node_modules/chance/chance.js" defer></script>
+  <script src="main.js" defer></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js" defer></script>
+</head>
+<body>
+  <div class="wrapper" ng-class="{'app-loaded': true}">
+    <div ng-controller="PageController as pageCtrl">
+      <div class="sort">
+        <div class="btn-group show-style" role="group">
+          <button type="button" class="btn btn-primary" ng-click="sorter='horizontal'"><span class="fas fa-ellipsis-v"></span></button>
+          <button type="button" class="btn btn-primary" ng-click="sorter='sor'"><span class="fas fa-ellipsis-h"></span></button>
+        </div>
+        <div class="right sort-btns">
+          <span class="sort-text">Sorting:</span>
+          <div class="btn-group sort-price" role="group">
+            <button type="button" class="btn btn-primary" ng-click="order='price'">price <span class="fa fa-arrow-down"></span></button>
+            <button type="button" class="btn btn-primary" ng-click="order='-price'">price <span class="fa fa-arrow-up"></span></button>
+          </div>
+          <div class="btn-group sort-name" role="group">
+            <button type="button" class="btn btn-primary" ng-click="order='name'">name <span class="fa fa-arrow-down"></span></button>
+            <button type="button" class="btn btn-primary" ng-click="order='-name'">name <span class="fa fa-arrow-up"></span></button>
+          </div>
+        </div>
+
+      </div>
+      
+      <div ng-controller="ProductController as productCtrl">
+        <div class="row" ng-class="sorter">
+          <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" ng-repeat="product in productCtrl.products | orderBy : order">
+            <div class="item-content">
+              
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" ng-src="{{ product.image }}" alt="{{ product.model }}"></a>
+                <div class="card-body">
+                  <h4 class="card-title">{{ product.name }}</h4>
+                  <h5>{{ product.model }}</h5>
+                  <p>{{ product.price | currency }}</p>
+                </div>
+              </div>
+              <div class="hide">
+                <div ng-controller="SizeController as sizeCtrl">
+                    
+                  <p>
+                    <span class="title">Availible sizes:</span>             
+                    <span class="size-type" ng-class="{ active: sizeCtrl.isSelected(1) }">
+                      <a href ng-click="sizeCtrl.selectTab(1)">US</a>
+                    </span>
+                    <span class="size-type" ng-class="{ active: sizeCtrl.isSelected(2) }">
+                      <a href ng-click="sizeCtrl.selectTab(2)">UK</a>
+                    </span>
+                    <span class="size-type" ng-class="{ active: sizeCtrl.isSelected(3) }">
+                      <a href ng-click="sizeCtrl.selectTab(3)">EU</a>
+                    </span>
+                    <span class="size-type" ng-class="{ active: sizeCtrl.isSelected(4) }">
+                      <a href ng-click="sizeCtrl.selectTab(4)">CM</a>
+                    </span>
+                  </p>
+                  <div ng-controller="SizeNumController as sizeNumCtrl">
+                    <ul ng-show="sizeCtrl.isSelected(1)">
+                      <li ng-repeat="size in product.sizeUS" ng-class="{ active: sizeNumCtrl.isSelected($index) }">
+                        <a href ng-click="sizeNumCtrl.selectTab($index)">{{ size | float }}</a>
+                      </li>
+                    </ul>
+                    <ul ng-show="sizeCtrl.isSelected(2)">
+                      <li ng-repeat="size in product.sizeUK" ng-class="{ active: sizeNumCtrl.isSelected($index) }">
+                        <a href ng-click="sizeNumCtrl.selectTab($index)">{{ size | float }}</a>
+                      </li>
+                    </ul>
+                    <ul ng-show="sizeCtrl.isSelected(3)">
+                      <li ng-repeat="size in product.sizeEU" ng-class="{ active: sizeNumCtrl.isSelected($index) }">
+                        <a href ng-click="sizeNumCtrl.selectTab($index)">{{ size | float }}</a>
+                      </li>
+                    </ul>
+                    <ul ng-show="sizeCtrl.isSelected(4)">
+                      <li ng-repeat="size in product.sizeCM" ng-class="{ active: sizeNumCtrl.isSelected($index) }">
+                        <a href ng-click="sizeNumCtrl.selectTab($index)">{{ size | float }}</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+                <button class="btn item-btn btn-success" ng-hide="{{ product.sold }}">Into cart!</button>
+                <button class="btn item-btn btn-primary">Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

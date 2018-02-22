@@ -1,0 +1,92 @@
+.wrapper {
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.wrapper.app-loaded {
+  opacity: 1;
+}
+.row.horizontal {
+  display: block;
+}
+.sort {
+  height: 70px;
+}
+.right {
+  width: 416px;
+  float: right;
+}
+.right .sort-text {
+  font-size: 1.5rem;
+}
+.hide {
+  display: none;
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 15px 5px;
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.125);
+  border-top: none;
+}
+.hide p {
+  padding: 5px;
+  border-top: 1px solid #000;
+}
+.hide p span.active a {
+  color: #00f;
+}
+.hide p a {
+  color: #000;
+}
+.hide p a:hover {
+  text-decoration: none;
+}
+.hide ul {
+  text-align: left;
+  padding: 5px;
+}
+.hide ul li {
+  display: inline-block;
+  list-style: none;
+  padding: 5px;
+  margin: 3px;
+  border: 1px solid rgba(0,0,0,0.125);
+}
+.hide ul li a {
+  text-decoration: none;
+  color: #000;
+}
+.hide ul li:hover,
+.hide ul li.active {
+  cursor: pointer;
+  background-color: #add8e6;
+}
+.hide ul li:hover a,
+.hide ul li.active a {
+  color: #fff;
+}
+div.col-lg-3.col-md-4.col-sm-6.portfolio-item {
+  padding: 15px;
+  position: relative;
+}
+div.col-lg-3.col-md-4.col-sm-6.portfolio-item:hover .hide {
+  display: block;
+}
+div.col-lg-3.col-md-4.col-sm-6.portfolio-item:hover .card {
+  border-bottom: none;
+}
+div.col-lg-3.col-md-4.col-sm-6.portfolio-item .card {
+  border-radius: 0;
+}
+div.col-lg-3.col-md-4.col-sm-6.portfolio-item .card .card-body {
+  padding-bottom: 5px;
+}
+div.col-lg-3.col-md-4.col-sm-6.portfolio-item .item-content {
+  text-align: center;
+}
+.item-btn {
+  width: 49%;
+}
