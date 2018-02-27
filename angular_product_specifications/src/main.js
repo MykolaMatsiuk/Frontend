@@ -103,7 +103,8 @@ app.controller('StoreController', function () {
                    stars:  random.stars(),
                    body:   random.sentence(),
                    author: random.email()
-               }]
+               }],
+               specifications: []
            };
        });
 });
@@ -140,6 +141,16 @@ app.controller('ReviewController', function () {
        this.review.date = new Date();
        product.reviews.push(this.review);
        this.review = {};
+    };
+});
+
+app.controller('SpecificationsController', function () {
+    this.spec = {};
+    this.colors = ["green", "red", "blue", "lightblue", "yellow"];
+
+    this.addSpec = function (product) {
+        product.specifications.push(this.spec);
+        this.spec = {};
     };
 });
 

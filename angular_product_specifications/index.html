@@ -64,7 +64,77 @@
                 <div class="panel" ng-show="panel.isSelected(2)">
                     <div class="panel-body">
                         <h4>Specifications</h4>
-                        <blockquote>No data yet</blockquote>
+
+                        <blockquote ng-repeat="spec in product.specifications">
+                            <p>Weight(g): {{ spec.weight }}</p>
+                            <p>From: {{ spec.country }}</p>
+                            <p>
+                                Shiny: {{ spec.shiny }}
+                            </p>
+                            <p>Q-y of faces:{{ spec.face }}</p>
+                            <p>For: {{ spec.gender }}</p>
+                            <p>{{ spec.description }}</p>
+                            <i>{{ spec.color }}</i>
+                        </blockquote>
+
+                        <form name="specForm" ng-controller="SpecificationsController as specCtrl" 
+                            ng-submit="specForm.$valid && specCtrl.addSpec(product)" novalidate>
+
+                            <blockquote>
+                                <p>Weight(g): {{ specCtrl.spec.weight }}</p>
+                                <p>From: {{ specCtrl.spec.country }}</p>
+                                <p><input ng-model="specCtrl.spec.shiny" type="checkbox" required/>
+                                    Shiny: {{ specCtrl.spec.shiny }}
+                                </p>
+                                <p>Q-y of faces:{{ specCtrl.spec.face }}</p>
+                                <p><input name="gender" ng-model="specCtrl.spec.gender" type="radio" value="male" required/>
+                                <input name="gender" ng-model="specCtrl.spec.gender" type="radio" value="female" required/>
+                                    For: {{ specCtrl.spec.gender }}
+                                </p>
+                                <p>{{ specCtrl.spec.description }}</p>
+                                <i>{{ specCtrl.spec.color }}</i>
+                            </blockquote>
+                            
+                            <fieldset class="form-group">
+                                <input class="form-control" ng-model="specCtrl.spec.weight" type="number" 
+                                placeholder="choose weight" required
+                                />
+                            </fieldset>
+
+                            <fieldset class="form-group">
+                                <input class="form-control" ng-model="specCtrl.spec.country" type="text" 
+                                placeholder="choose origin country" required
+                                />
+                            </fieldset>
+
+                            <fieldset class="form-group">
+                                <select class="form-control" ng-model="specCtrl.spec.face" ng-options="face for face in [12,11,10,9,8,7,6,5]" 
+                                placeholder="select number of faces" required>
+                                    <option value="">Choose number of faces</option>
+                                </select>
+                            </fieldset>
+
+                            <fieldset class="form-group">
+
+                            </fieldset>
+
+                            <fieldset class="form-group">
+                                <textarea class="form-control" ng-model="specCtrl.spec.description" 
+                                placeholder="technical description" required>
+                                </textarea>
+                            </fieldset>
+
+                            <fieldset class="form-group">
+                                <select class="form-control" ng-model="specCtrl.spec.color" ng-options="color for color in specCtrl.colors" required>
+                                    <option value="">Choose color</option>
+                                </select>
+                            </fieldset>
+
+                            <fieldset class="form-group">
+                                <input class="btn btn-primary" type="submit" value="Submit" />
+                            </fieldset>                           
+
+                        </form>
                     </div>
                 </div>
                 <div class="panel" ng-show="panel.isSelected(3)">
@@ -103,7 +173,8 @@
                                         class="form-control"
                                         ng-model="reviewCtrl.review.body"
                                         placeholder="Write a short review of the product..."
-                                        required></textarea>
+                                        required>        
+                                </textarea>
                             </fieldset>
 
                             <fieldset class="form-group">
