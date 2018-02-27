@@ -75,6 +75,7 @@
                         <blockquote ng-repeat="review in product.reviews">
                             <b>{{ review.stars }} Stars:</b>
                             {{ review.body }}
+                            <p><i>{{ review.date | date : 'short' }}</i></p>
                             <div><i>– {{ review.author }}</i></div>
                         </blockquote>
 

@@ -130,12 +130,17 @@ app.controller('GalleryController', function () {
 });
 
 app.controller('ReviewController', function () {
-   this.review = {};
+    this.review = {
+        stars: 4,
+        body: "hello everybody, let me introduce myself. I'm Jimmy.",
+        author: "jimmy@mail.com"
+    };
 
-   this.addReview = function(product){
+    this.addReview = function(product){
+       this.review.date = new Date();
        product.reviews.push(this.review);
        this.review = {};
-   };
+    };
 });
 
 
