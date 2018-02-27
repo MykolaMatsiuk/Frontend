@@ -1,0 +1,73 @@
+.none {
+    display: none !important;
+}
+
+
+
+.wrapper {
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.wrapper.app-loaded {
+    opacity: 1;
+}
+
+
+h2, h3 {
+    margin: 0 0 10px;
+}
+
+
+.item {
+    display: inline-block;
+    vertical-align: top;
+    width: 350px;
+    margin: 0 20px 20px 0;
+    padding: 10px;
+    border: 1px solid #000;
+}
+img {
+    min-width: 70px;
+    min-height: 70px;
+}
+.img-wrap > img,
+.item > img {
+    display: block;
+    height: 100px;
+    margin: 0 auto 10px;
+}
+.img-thumbnails {
+    padding: 0;
+    text-align: center;
+}
+.img-thumbnails .thumbnail {
+    display: inline-block;
+    vertical-align: top;
+}
+
+button {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+
+
+
+/*.ng-dirty.ng-invalid {
+    background-color: hotpink;
+}
+.ng-dirty.ng-valid {
+    background-color: forestgreen;
+}
+*/
+
+
+
+
+
+
+
+
+
