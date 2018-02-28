@@ -146,9 +146,9 @@ app.controller('ReviewController', function () {
     };
 });
 
-app.controller('SpecificationsController', function ($scope) {
+app.controller('SpecificationsController', function () {
     this.spec = {};
-    $scope.colors = ["green", "red", "blue", "lightblue", "yellow"];
+    this.colors = ["green", "red", "blue", "lightblue", "yellow"];
 
     this.addSpec = function (product) {
         product.specifications.push(this.spec);
