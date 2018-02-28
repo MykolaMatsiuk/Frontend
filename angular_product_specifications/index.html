@@ -5,10 +5,12 @@
     <title>My angular app</title>
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="node_modules/angular-multiple-select/build/multiple-select.min.css">
     <link rel="stylesheet" href="src/main.css"/>
 
     <script src="node_modules/angular/angular.js" defer></script>
     <script src="node_modules/chance/chance.js" defer></script>
+    <script src="node_modules/angular-multiple-select/build/multiple-select.min.js" defer></script>
     <script src="src/main.js" defer></script>
 </head>
 <body>
@@ -68,32 +70,17 @@
                         <blockquote ng-repeat="spec in product.specifications">
                             <p>Weight(g): {{ spec.weight }}</p>
                             <p>From: {{ spec.country }}</p>
-                            <p>
-                                Shiny: {{ spec.shiny }}
-                            </p>
+                            <p>Shiny: {{ spec.shiny }}</p>
                             <p>Q-y of faces:{{ spec.face }}</p>
                             <p>For: {{ spec.gender }}</p>
                             <p>{{ spec.description }}</p>
-                            <i>{{ spec.color }}</i>
+                            <p>Color: 
+                                <i ng-repeat="color in spec.color">{{ color }} </i>
+                            </p>
                         </blockquote>
 
                         <form name="specForm" ng-controller="SpecificationsController as specCtrl" 
                             ng-submit="specForm.$valid && specCtrl.addSpec(product)" novalidate>
-
-                            <blockquote>
-                                <p>Weight(g): {{ specCtrl.spec.weight }}</p>
-                                <p>From: {{ specCtrl.spec.country }}</p>
-                                <p><input ng-model="specCtrl.spec.shiny" type="checkbox" required/>
-                                    Shiny: {{ specCtrl.spec.shiny }}
-                                </p>
-                                <p>Q-y of faces:{{ specCtrl.spec.face }}</p>
-                                <p><input name="gender" ng-model="specCtrl.spec.gender" type="radio" value="male" required/>
-                                <input name="gender" ng-model="specCtrl.spec.gender" type="radio" value="female" required/>
-                                    For: {{ specCtrl.spec.gender }}
-                                </p>
-                                <p>{{ specCtrl.spec.description }}</p>
-                                <i>{{ specCtrl.spec.color }}</i>
-                            </blockquote>
                             
                             <fieldset class="form-group">
                                 <input class="form-control" ng-model="specCtrl.spec.weight" type="number" 
@@ -103,7 +90,7 @@
 
                             <fieldset class="form-group">
                                 <input class="form-control" ng-model="specCtrl.spec.country" type="text" 
-                                placeholder="choose origin country" required
+                                placeholder="type country of origin" required
                                 />
                             </fieldset>
 
@@ -115,9 +102,15 @@
                             </fieldset>
 
                             <fieldset class="form-group">
-
+                                <span>Shiny: </span><input ng-model="specCtrl.spec.shiny" type="checkbox"/>
                             </fieldset>
-
+                            
+                            <fieldset class="form-group">
+                                <span>Choose gender:</span>
+                                <span>Male </span><input name="gender" ng-model="specCtrl.spec.gender" type="radio" value="male" required/>
+                                <span>Female </span><input name="gender" ng-model="specCtrl.spec.gender" type="radio" value="female" required/>
+                            </fieldset>
+                                
                             <fieldset class="form-group">
                                 <textarea class="form-control" ng-model="specCtrl.spec.description" 
                                 placeholder="technical description" required>
@@ -125,9 +118,10 @@
                             </fieldset>
 
                             <fieldset class="form-group">
-                                <select class="form-control" ng-model="specCtrl.spec.color" ng-options="color for color in specCtrl.colors" required>
-                                    <option value="">Choose color</option>
-                                </select>
+                                <span>Choose color:</span>
+                                <multiple-autocomplete ng-model="specCtrl.spec.color"
+                                    suggestions-arr="colors">
+                                </multiple-autocomplete>
                             </fieldset>
 
                             <fieldset class="form-group">

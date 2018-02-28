@@ -46,7 +46,9 @@ var random = {
 };
 
 
-var app = angular.module('app', []);
+var app = angular.module('app', [
+    'multipleSelect'
+]);
 
 
 // app.controller('StoreController', function () {
@@ -110,7 +112,7 @@ app.controller('StoreController', function () {
 });
 
 app.controller('PanelController', function () {
-   this.tab = 3;
+   this.tab = 2;
 
    this.selectTab = function (tab) {
        this.tab = tab;
@@ -144,9 +146,9 @@ app.controller('ReviewController', function () {
     };
 });
 
-app.controller('SpecificationsController', function () {
+app.controller('SpecificationsController', function ($scope) {
     this.spec = {};
-    this.colors = ["green", "red", "blue", "lightblue", "yellow"];
+    $scope.colors = ["green", "red", "blue", "lightblue", "yellow"];
 
     this.addSpec = function (product) {
         product.specifications.push(this.spec);
