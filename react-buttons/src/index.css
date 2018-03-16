@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+h3 {
+  margin: 10px;
+  letter-spacing: 13px;
+  font-weight: 200;
+}
+.btn-green {
+  margin: 5px;
+  border: 1px solid #008000;
+  border-radius: 3px;
+  color: #008000;
+  background-color: transparent;
+}
+.btn-green:hover {
+  margin: 5px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #008000;
+}
+.btn-red {
+  margin: 5px;
+  border: 1px solid #f00;
+  border-radius: 3px;
+  color: #f00;
+  background-color: transparent;
+}
+.btn-red:hover {
+  margin: 5px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #f00;
+}
+.btn-blue {
+  margin: 5px;
+  border: 1px solid #add8e6;
+  border-radius: 3px;
+  color: #add8e6;
+  background-color: transparent;
+}
+.btn-blue:hover {
+  margin: 5px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #add8e6;
+}
+.alert-green {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #008000;
+}
+.alert-blue {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #add8e6;
+}
+.alert-red {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #f0f;
+}
+.item {
+  position: relative;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #c7c3fe;
+}
+.item .circle {
+  position: absolute;
+  top: -7px;
+  right: 3px;
+  padding: 1px 3px;
+  font-size: x-small;
+  border: 1px solid #03165f;
+  border-radius: 50px;
+  background-color: #03165f;
+  color: #fff;
+}

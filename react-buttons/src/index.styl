@@ -1,0 +1,52 @@
+btn($color, $bg-color)
+  margin 5px
+  border 1px solid $color
+  border-radius 3px
+  color $color
+  background-color $bg-color
+alert($color)
+  margin 5px
+  padding 5px
+  border-radius 5px
+  background-color $color
+body
+  margin 0
+  padding 0
+  font-family sans-serif
+h3
+  margin 10px
+  letter-spacing 13px
+  font-weight 200
+.btn-green
+  btn(green, transparent)
+  &:hover
+    btn(#fff, green)
+.btn-red
+  btn(red, transparent)
+  &:hover
+    btn(#fff, red)
+.btn-blue
+  btn(lightblue, transparent)
+  &:hover
+    btn(#fff, lightblue)
+.alert-green
+  alert(green)
+.alert-blue
+  alert(lightblue)
+.alert-red
+  alert(magenta)
+.item
+  position relative
+  margin 5px
+  padding 5px
+  border 1px solid #C7C3FE
+  .circle
+    position absolute
+    top -7px
+    right 3px
+    padding 1px 3px
+    font-size x-small
+    border 1px solid #03165F
+    border-radius 50px
+    background-color #03165F
+    color #fff
