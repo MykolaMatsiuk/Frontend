@@ -16,9 +16,11 @@ class Alert extends Component {
 
 class Badge extends Component {
   render () {
-    return <span className={this.props.class}>{this.props.name}
-             <span className={this.props.classBadge}>{this.props.count}</span>
-           </span>
+    return (
+      <span className={this.props.class}>{this.props.name}
+        <span className={this.props.classBadge}>{this.props.count}</span>
+      </span>
+    );
   }
 }
 
