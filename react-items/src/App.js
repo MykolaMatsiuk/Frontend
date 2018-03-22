@@ -10,11 +10,6 @@ class Item extends Component {
     open: PropTypes.func.isRequired,
     openM: PropTypes.func.isRequired
   };
-  componentWillMount () {
-    if (!this.props.showItem) {
-      return null;
-    }
-  }
   render() {
     return (
       <div className="item">
@@ -144,7 +139,6 @@ class App extends Component {
       itemsInCart: [],
       cart: "cart is empty"
     };
-      window.cart = this.state.itemsInCart;
   }
   componentWillMount() {
     this.setState({
