@@ -181,7 +181,6 @@ class App extends Component {
         <div className="search-cart">
           <Input 
             showItem = {this.state.showIt}
-            ref      = {el => this.input = el}
             onChange = {e => this.toggleItem(e)}
           />
           <Cart
