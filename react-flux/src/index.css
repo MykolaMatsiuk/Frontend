@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.blocks-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+}
+.block {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+.block:first-child {
+  border-top-left-radius: 15px;
+}
+.block:last-child {
+  border-bottom-right-radius: 15px;
+}
+.block:nth-child(4) {
+  border-top-right-radius: 15px;
+}
+/*.block:nth-child(4n) {
+  border-bottom-right-radius: 15px;
+}
+.block:nth-child(4n+1) {
+  border-bottom-left-radius: 15px;
+}*/
+
