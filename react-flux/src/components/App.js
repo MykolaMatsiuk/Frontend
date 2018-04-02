@@ -8,9 +8,6 @@ import { connect } from 'react-redux';
 class App extends Component {
   addBtn = () => {
     const { dispatch } = this.props;
-    store.subscribe(() => {
-      console.log('Store:', store.getState());
-    });
     dispatch(AppActions.addBlock());
   };
   rmvBtn = () => {
