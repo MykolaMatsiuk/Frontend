@@ -1,20 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ButtonA from './ButtonA';
+import ButtonB from './ButtonB';
+import { SharedSnackbarProvider } from './SharedSnackbar.context';
+
+const styles = {
+  app: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100vh'
+  }
+};
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div style={styles.app}>
+        <SharedSnackbarProvider>
+          <ButtonA />
+          <ButtonB />
+        </SharedSnackbarProvider>
       </div>
-    );
+    )
   }
 }
 
