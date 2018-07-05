@@ -18,9 +18,13 @@ class Body extends Component {
       </ul>
     );
 
+    const userChoice = false;
+
     return (
       <div className="App">
         {bodyHeader}
+        {userChoice && <h2>Block 1</h2>}
+        {!userChoice && <h2>Block 2</h2>}
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>

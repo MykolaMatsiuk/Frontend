@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "author": "vsco",
+    "img": "1",
+    "likes": "12",
+    "comments": [{"id":"1", "author": "vsco", "text": "Amazing work, friend "}]
+  },
+  {
+    "id": 2,
+    "author": "musicfan",
+    "img": "2",
+    "likes": "0",
+    "comments":[{"id":"2", "author": "vsco", "text": "Amazing work, friend "}]
+  },
+  {
+    "id": 3,
+    "author": "bro12",
+    "img": "3",
+    "likes": "10",
+    "comments": [{"id":"3", "author": "vsco", "text": "Amazing work, friend "}]
+  },
+  {
+    "id": 4,
+    "author": "vsco",
+    "img": "4",
+    "likes": "4",
+    "comments": [{"id":"4", "author": "vsco", "text": "Amazing work, friend "}]
+  },
+  {
+    "id": 5,
+    "author": "topphotos",
+    "img": "5",
+    "likes": "3",
+    "comments": [{"id":"5", "author": "vsco", "text": "Amazing work, friend "}]
+  },
+  {
+    "id": 6,
+    "author": "vsco",
+    "img": "6",
+    "likes": "5",
+    "comments": [{"id":"6", "author": "vsco", "text": "Amazing work, friend "}]
+  },
+  {
+    "id": 7,
+    "author": "vsco",
+    "img": "7",
+    "likes": "22",
+    "comments": [{"id":"7", "author": "vsco", "text": "Amazing work, friend "}]
+  },
+  {
+    "id": 8,
+    "author": "kyivgram",
+    "img": "8",
+    "likes": "1",
+    "comments": []
+  }
+]
