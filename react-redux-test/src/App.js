@@ -9,7 +9,10 @@ import Preloader from './components/Preloader/Preloader';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      name: 'Bob',
+      age: 30
+    };
   }
 
   componentWillMount() {
@@ -27,7 +30,7 @@ class App extends Component {
   }
 
   render() {
-    const age = 30;
+    const { name, age, news } = this.state;
 
     if (!this.state.news) {
       return <Preloader />
@@ -35,9 +38,9 @@ class App extends Component {
 
     return (
       <Fragment>
-        <Header name='Bob' age={age} />
+        <Header name={name} age={age} />
         <Body />
-        <Feed news={this.state.news} />
+        <Feed news={news} />
         <Footer />
       </Fragment>
     );
