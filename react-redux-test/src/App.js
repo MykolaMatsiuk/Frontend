@@ -5,6 +5,7 @@ import Body from './components/Body/Body';
 import Footer from './components/Footer/Footer';
 import Feed from './components/Feed/Feed';
 import Preloader from './components/Preloader/Preloader';
+import { Route } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class App extends Component {
   componentWillMount() {
     console.log('componentWillMount');
 
-    setTimeout(this.fetchDataFromServer, 3000);
+    setTimeout(this.fetchDataFromServer, 1000);
   }
 
   fetchDataFromServer = () => {
@@ -40,8 +41,8 @@ class App extends Component {
       <Fragment>
         <Header name={name} age={age} />
         <Body />
-        <Feed news={news} />
-        <Footer />
+        <Route path='/feed' render={() => <Feed news={this.state.news}/>} />
+        <Route exact path='/footer' component={Footer} />
       </Fragment>
     );
   }
