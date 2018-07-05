@@ -6,9 +6,11 @@ import Footer from './components/Footer/Footer';
 
 class App extends Component {
   render() {
+    const age = 30;
+
     return (
       <Fragment>
-        <Header />
+        <Header name='Bob' age={age} />
         <Body />
         <Footer />
       </Fragment>
