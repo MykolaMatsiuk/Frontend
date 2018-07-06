@@ -3,7 +3,12 @@ const initialState = {
   comments: ['aa', 'bb']
 }
 
-function like (state = {likes: 0}, action) {
+function like (state = initialState, action) {
+  switch (action.type) {
+    case 'NEW_LIKE':
+      return {...state, likes: state.likes + 1};
+  }
+
   return state;
 }
 

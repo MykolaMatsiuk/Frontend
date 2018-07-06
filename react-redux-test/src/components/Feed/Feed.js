@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class Feed extends Component {
   render() {
     console.log(this.props);
     return (
-      <h1>Feed</h1>
+      <div>
+        <h1>Feed</h1>
+        <button  onClick={() => this.props.dispatch({
+          type: 'NEW_LIKE'
+        })}>Like</button>
+      </div>
     );
   }
 }
 
-export default Feed;
+export default connect()(Feed);
