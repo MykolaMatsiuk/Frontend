@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
-class Footer extends Component {
+class Feed extends Component {
   render() {
+    console.log(this.props);
     return (
       <h1>Feed</h1>
     );
   }
 }
 
-export default Footer;
+export default Feed;

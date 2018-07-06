@@ -5,6 +5,7 @@ import Body from './components/Body/Body';
 import Footer from './components/Footer/Footer';
 import Feed from './components/Feed/Feed';
 import Preloader from './components/Preloader/Preloader';
+import Menu from './components/Menu/Menu';
 import { Route } from 'react-router-dom';
 
 class App extends Component {
@@ -36,12 +37,12 @@ class App extends Component {
     if (!this.state.news) {
       return <Preloader />
     }
-
     return (
       <Fragment>
-        <Header name={name} age={age} />
+        <Menu />
+        <Route path='/header' render={(props) => <Header {...props} name={this.props.name} age={this.props.age} />} />
         <Body />
-        <Route path='/feed' render={() => <Feed news={this.state.news}/>} />
+        <Route path='/feed/:id' render={(props) => <Feed {...props} news={news}/>} />
         <Route exact path='/footer' component={Footer} />
       </Fragment>
     );
