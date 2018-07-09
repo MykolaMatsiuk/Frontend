@@ -4,15 +4,15 @@ const calculator = () => {
       secondN;
 
   return {
-    add: function (firstN, secondN) {
+    add (firstN, secondN) {
       total = firstN + secondN;
       return total;
     },
-    substract: (firstN, secondN) => {
+    substract (firstN, secondN) {
       total = firstN - secondN;
       return total;
     },
-    divide: (firstN, secondN) => {
+    divide (firstN, secondN) {
       if (secondN) {
         total = firstN / secondN;
         return total;
@@ -20,7 +20,7 @@ const calculator = () => {
         return "You can not divide on zero";
       }
     },
-    multiply: (firstN, secondN) => {
+    multiply (firstN, secondN) {
       total = firstN * secondN;
       return total;
     },
