@@ -15,6 +15,10 @@ describe('calculator', () => {
     assert.equal(calc.divide(5, 2), 2.5);
     done();
   }),
+  it('can not divide on zero', done => {
+    assert.equal(calc.divide(5, 0), "You can not divide on zero");
+    done();
+  }),
   it('should multiply two numbers', done => {
     assert.equal(calc.multiply(5, 2), 10);
     done();

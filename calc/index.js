@@ -13,8 +13,12 @@ const calculator = () => {
       return total;
     },
     divide: (firstN, secondN) => {
-      total = firstN / secondN;
-      return total;
+      if (secondN) {
+        total = firstN / secondN;
+        return total;
+      } else {
+        return "You can not divide on zero";
+      }
     },
     multiply: (firstN, secondN) => {
       total = firstN * secondN;
