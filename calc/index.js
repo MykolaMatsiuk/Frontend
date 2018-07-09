@@ -4,7 +4,7 @@ const calculator = () => {
       secondN;
 
   return {
-    add: (firstN, secondN) => {
+    add: function (firstN, secondN) {
       total = firstN + secondN;
       return total;
     },
@@ -20,8 +20,8 @@ const calculator = () => {
       total = firstN * secondN;
       return total;
     },
-    total: () => total;
+    total: () => total
   }
-}
+};
 
 module.exports = calculator();
