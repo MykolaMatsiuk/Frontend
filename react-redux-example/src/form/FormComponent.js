@@ -1,10 +1,21 @@
-import React, { Component } from "react";
+import React from "react";
 
 const FormComponent = props => (
-  <form onSubmit={props.onFormSubmit}>
+  <form
+    onSubmit={event => {
+      event.preventDefault();
+      props.submitAction();
+      alert(props.text);
+    }}
+  >
     <h1>Our form example</h1>
     <div>
-      <textarea onChange={props.onTextChange}>
+      <textarea
+        onChange={event =>
+          props.textAction(event.terget.value)
+        }
+        value={props.text}
+      >
         {props.text}
       </textarea>
     </div>
