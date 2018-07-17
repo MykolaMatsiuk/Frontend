@@ -1,0 +1,23 @@
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+h2, p {
+  margin-left: 10px;
+}
+#svg_1, #svg_8, #svg_7, #svg_6, #svg_3 {
+  stroke-dashoffset: 200px;
+  stroke-dasharray: 200px;
+  animation: dash 2s linear forwards;
+}
+#svg_4, #svg_5 {
+  stroke-dasharray: 280px;
+  stroke-dashoffset: 280px;
+  animation: dash 2s linear forwards;
+}
+#svg_2 {
+  stroke-dasharray: 705px;
+  stroke-dashoffset: 705px;
+  animation: dash 2s linear forwards;
+}

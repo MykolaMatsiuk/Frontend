@@ -1,0 +1,35 @@
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.item {
+  float: left;
+  width: 150px;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #c9c7c7;
+}
+.item .desc {
+  margin: 5px;
+  color: #010141;
+  background-color: #e1f7fd;
+  border: 1px solid #04c3d4;
+}
+.item .desc:hover {
+  color: #fff;
+  background-color: #04c3d4;
+  cursor: pointer;
+}
+.item .buy {
+  margin: 5px;
+  color: #020;
+  background-color: #89f886;
+  border: 1px solid #02890c;
+}
+.item .buy:hover {
+  color: #fff;
+  background-color: #02890c;
+  cursor: pointer;
+}

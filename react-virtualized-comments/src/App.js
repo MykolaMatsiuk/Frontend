@@ -12,17 +12,9 @@ const rowWidth = 800;
 class App extends Component {
   constructor() {
     super();
-    this.state = { list: [] };
-    this.cache = new CellMeasurerCache({
-      fixedWidth: true,
-      defaultHeight: 100
-    });
-  }
-
-  componentDidMount() {
     this.renderRow = this.renderRow.bind(this);
-    this.setState({
-      list: [...Array(rowCount)].map((val, i) => {
+    // this.state = { list: [] };
+    this.list = [...Array(rowCount)].map((val, i) => {
         return {
           id: i,
           name: "Peter Mah",
@@ -35,11 +27,32 @@ class App extends Component {
           })
         }
       })
+    this.cache = new CellMeasurerCache({
+      fixedWidth: true,
+      defaultHeight: 100
     });
   }
 
+  componentDidMount() {
+    // this.setState({
+    //   list: [...Array(rowCount)].map((val, i) => {
+    //     return {
+    //       id: i,
+    //       name: "Peter Mah",
+    //       image: "http://via.placeholder.com/40",
+    //       text: loremIpsum({
+    //         count: 1,
+    //         units: "sentences",
+    //         sentenceLowerBound: 4,
+    //         sentenceUpperBound: 80
+    //       })
+    //     }
+    //   })
+    // });
+  }
+
   renderRow({ index, key, style, parent }) {
-    const { list } = this.state;
+    // const { list } = this.state;
     return (
       <CellMeasurer
         key={key}
@@ -49,11 +62,11 @@ class App extends Component {
         rowIndex={index}>
           <div style={style} className="row">
             <div className="image">
-              <img src={list[index].image} alt="" />
+              <img src={this.list[index].image} alt="" />
             </div>
             <div className="content">
-              <div>{list[index].name}</div>
-              <div>{list[index].text}</div>
+              <div>{this.list[index].name}</div>
+              <div>{this.list[index].text}</div>
             </div>
           </div>
       </CellMeasurer>
@@ -73,7 +86,7 @@ class App extends Component {
                 deferredMeasurementCache={this.cache}
                 rowHeight={this.cache.rowHeight}
                 rowRenderer={this.renderRow}
-                rowCount={this.state.list.length}
+                rowCount={this.list.length}
                 overscanRowCount={3}
               />
             }}
