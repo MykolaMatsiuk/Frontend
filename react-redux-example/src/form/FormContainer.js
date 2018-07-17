@@ -1,33 +1,16 @@
-import React, { Component } from "react";
+import { withStateHandlers } from "recompose";
 
-const FormContainer = FormComponent => {
-  return class FormContainer extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        text: ""
-      };
-    }
-
-    onTextChange = event => {
-      this.setState({ text: event.target.value });
-    };
-
-    onFormSubmit = event => {
+const FormContainer = withStateHandlers(
+  ({ text = "" }) => ({ text }),
+  {
+    onTextChange: () => event => ({
+      text: event.target.value
+    }),
+    onFormSubmit: ({ text }) => event => {
       event.preventDefault();
-      alert(this.state.text);
-    };
-
-    render() {
-      return (
-        <FormComponent
-          text={this.state.text}
-          onTextChange={this.onTextChange}
-          onFormSubmit={this.onFormSubmit}
-        />
-      );
+      alert(text);
     }
-  };
-};
+  }
+);
 
 export default FormContainer;
