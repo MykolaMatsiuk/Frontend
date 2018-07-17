@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Form from "./form/Form";
+import Form from "./Form/Form";
 
 class App extends Component {
   render() {
